@@ -1,54 +1,96 @@
 # JEV step by step
 
-Learn **JEV** — TypeSafe AI's "System One" decision model — by building a customer-support assistant, **Desk Buddy**,
-one small step at a time. Every step runs the **same customer message** through two versions and shows them side by
-side in your terminal:
+Learn **JEV**, TypeSafe AI's "System One" decision model, by building a customer-support assistant called
+**Desk Buddy**, one small step at a time.
 
-- an **LLM-only** version (Gemini, with JSON-schema output — a fair, modern baseline), and
-- a **JEV** version (JEV alone → JEV + code → JEV + LLM → JEV + LLM inside Google ADK).
+Every step runs the **same customer message** through two versions and shows them side by side in your terminal:
 
-You pick a message from a list, watch both pipelines run as a live flow chart, and compare the answers, the
-milliseconds and the cost.
+- an **LLM-only** version: Gemini, with JSON-schema output (a fair, modern baseline);
+- a **JEV** version: JEV alone → JEV + code → JEV + LLM → JEV + LLM inside Google ADK.
 
-```
-💬 q02  "My order debited amount 2 time. I want immediate help."
+You pick a message from a list, watch both run as a live flow chart, and compare the answers, the milliseconds and
+the cost. ([See a full example below.](#how-a-step-works--one-example))
 
-JEV flow   ⏱ 444 ms
-┌─────────┐    ┌──────────────────┐    ┌────────┐
-│ Message │ ─▶ │ JEV · 1 question │ ─▶ │ Answer │
-│ ✔       │    │ ✔ 444 ms         │    │ ✔      │
-└─────────┘    └──────────────────┘    └────────┘
-  urgent      ██████████████████████████░░░░  0.86 → yes ✔
-
-LLM-only flow   ⏱ 1,389 ms
-┌─────────┐    ┌─────────────┐    ┌────────┐
-│ Message │ ─▶ │ Gemini call │ ─▶ │ Answer │
-│ ✔       │    │ ✔ 1,389 ms  │    │ ✔      │
-└─────────┘    └─────────────┘    └────────┘
-  {"urgent": true, "confidence": "high"}
-💡 Both match the gold label. JEV was 3.1× faster.
-```
-
-Modelled on [`ease-my-work/adk-step-by-step`](https://github.com/ease-my-work/adk-step-by-step) — same step-folder
+Modelled on [`ease-my-work/adk-step-by-step`](https://github.com/ease-my-work/adk-step-by-step): same step-folder
 style, same README sections. If you did that course, step 11 rebuilds Desk Buddy in Google ADK.
 
-## JEV in one minute
+## What is JEV?
 
-JEV turns messy input (the **state**) into **typed decisions with probabilities**. It doesn't write text.
+Most AI models you know are **LLMs**: they read text and *write* text. **JEV is different: it doesn't write
+anything. It decides.** You give it some input (the **state**: a message, a JSON record…) and a set of
+**questions**, and it returns a **typed answer with probabilities** for each question.
+
+```python
+from typesafe_sdk import Choice, TypeSafeClient
+
+jev = TypeSafeClient(model="jev-1.13")
+
+TEAM = Choice(
+    instructions="Which support team should handle this message?",
+    criteria={"billing": "payments, refunds", "shipping": "delivery", "other": "anything else"},
+)
+response = jev.system_one(
+    state="My order debited amount 2 time. I want immediate help.",
+    questions={"team": TEAM},
+)
+response.answers["team"].choice         # "billing"  ← always one of YOUR options
+response.answers["team"].probabilities  # e.g. {"billing": 0.99, "shipping": 0.0, "other": 0.01}
+```
+
+It has three kinds of question:
 
 | Question type | Asks | Returns | Desk Buddy example |
 |---|---|---|---|
-| `Noul` | Is this true? | `noul` — probability of yes | "Is this urgent?" → `0.94` |
-| `Choice` | Which option? | `choice`, `probabilities`, `confidence` | "Which team?" → `billing` |
-| `Score` | Which level on an ordered scale? | `score`, `legend`, `probabilities`, `confidence` | "How frustrated?" → `1.74` |
+| [`Noul`](https://docs.typesafe.ai/primitives/noul) | Is this true? | `noul`: the probability of yes | "Is this urgent?" → `0.94` |
+| [`Choice`](https://docs.typesafe.ai/primitives/choice) | Which option? | `choice`, `probabilities`, `confidence` | "Which team?" → `billing` |
+| [`Score`](https://docs.typesafe.ai/primitives/score) | Which level on an ordered scale? | `score`, `legend`, `probabilities`, `confidence` | "How frustrated (0–2)?" → `1.74` |
 
-It can only answer with options **you** gave it, and many questions in one request cost about the same time as one.
+All questions in one request are answered in parallel, so asking eight costs about the same time as asking one.
+
+**Read more in the JEV docs**
+
+| Topic | Link |
+|---|---|
+| Get a key and make your first call | [Quick start](https://docs.typesafe.ai/introduction/quickstart) |
+| What "System One" means | [System One](https://docs.typesafe.ai/concepts/system-one) |
+| What you can pass as input | [State](https://docs.typesafe.ai/concepts/state) |
+| The three question types | [Primitives](https://docs.typesafe.ai/primitives): [Noul](https://docs.typesafe.ai/primitives/noul) · [Choice](https://docs.typesafe.ai/primitives/choice) · [Score](https://docs.typesafe.ai/primitives/score) · [JSON in questions](https://docs.typesafe.ai/primitives/advanced) |
+| How confidence is calculated, and picking thresholds | [Confidence](https://docs.typesafe.ai/confidence) |
+| Where jev-1.13 is weak (maths, dates, literal reading…) | [jev-1.13 jaggedness](https://docs.typesafe.ai/model-jaggedness/jev-1.13) |
+| Routing messages to code, an LLM or a person | [Intent routing pattern](https://docs.typesafe.ai/patterns/intent-routing) |
+| Many questions in one call (10× faster, 12× cheaper) | [Parallel questions cookbook](https://docs.typesafe.ai/cookbooks/parallel_questions) |
+| The Python SDK, including the async client | [Python SDK reference](https://docs.typesafe.ai/sdk/python/api/clients/async) |
+| Every docs page in one list | [Docs index](https://docs.typesafe.ai/llms.txt) |
+
+## JEV vs an LLM
+
+The numbers come from this course's own runs on 2026-10-08 (JEV `jev-1.13` via OpenRouter, Gemini
+`gemini-3.5-flash` with minimal thinking). Each step's README has the details.
+
+| | JEV | LLM (Gemini) |
+|---|---|---|
+| **What it does** | Decides: yes/no, pick one, rate on a scale | Writes: replies, explanations, JSON |
+| **Answer** | Always one of your options (it can't invent one) | Free text; a JSON schema keeps it in shape |
+| **How sure is it?** | A probability for every option | A word it chooses to write ("high") |
+| **Speed per decision** (p50, steps 01–05) | 0.55–0.8 s | 1.3–1.5 s |
+| **Asking 1 vs 8 questions** | Same time (~480 ms either way) | Longer prompt, longer answer |
+| **Cost per 1,000 decisions** (steps 01–05) | $0.014–0.046 | $0.19–1.20 |
+| **Triage accuracy** (24 messages × 6 labels) | 137/144 | 139/144: a draw |
+| **Maths and dates** | Weak: said a 34-day-old delivery was "within 30 days" | Got every date check right |
+| **Writes a reply or explains itself** | No | Yes |
+| **Best at** | Routing, classifying, safety checks, judging a reply | Writing, explaining, multi-step reasoning |
+
+So the course doesn't replace the LLM with JEV. It splits the work:
 
 ```
-JEV  = fast System 1  → route, classify, gate, judge          (hundreds of ms)
-LLM  = slow System 2  → write replies, reason                 (seconds)
-Code = in control     → maths, dates, lookups, exact rules    (microseconds)
+JEV  = fast decisions  → route, classify, block, check a reply    (hundreds of ms)
+LLM  = writing         → the reply the customer reads             (seconds)
+Code = exact work      → maths, dates, lookups, policy rules      (microseconds)
 ```
+
+By step 10 that split gives the same accuracy as one big LLM call, at half the cost: decisions come 3× sooner,
+unsafe messages never reach the LLM, and every LLM reply is checked before it's sent. The one cost: the complete
+reply is slower, because it takes three calls instead of one.
 
 ## The course
 
@@ -279,11 +321,14 @@ exactly what each step adds.
 
 ## Learn more
 
-- [TypeSafe docs](https://docs.typesafe.ai/introduction/quickstart) ·
+- **JEV (TypeSafe AI):** [Quick start](https://docs.typesafe.ai/introduction/quickstart) · [System One](https://docs.typesafe.ai/concepts/system-one) ·
   [Primitives](https://docs.typesafe.ai/primitives) · [Confidence](https://docs.typesafe.ai/confidence) ·
-  [Intent routing](https://docs.typesafe.ai/patterns/intent-routing.md) ·
-  [jev-1.13 jaggedness](https://docs.typesafe.ai/model-jaggedness/jev-1.13.md)
-- [Google ADK](https://google.github.io/adk-docs/) · [ADK step by step](https://github.com/ease-my-work/adk-step-by-step)
+  [Intent routing](https://docs.typesafe.ai/patterns/intent-routing) · [jev-1.13 jaggedness](https://docs.typesafe.ai/model-jaggedness/jev-1.13) ·
+  [All docs](https://docs.typesafe.ai/llms.txt)
+- **Google ADK:** [Docs](https://google.github.io/adk-docs/) ·
+  [Custom agents](https://google.github.io/adk-docs/agents/custom-agents/) ·
+  [ADK step by step](https://github.com/ease-my-work/adk-step-by-step)
+- **Gemini:** [Get a free API key](https://aistudio.google.com/apikey)
 
 All customers, orders and messages in `data/` are fictional.
 
