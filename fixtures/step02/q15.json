@@ -1,0 +1,59 @@
+{
+ "step": 2,
+ "query": "q15",
+ "text": "cant login app says error 503 since morning, need to pay bill today",
+ "jev": {
+  "raw": {
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "technical",
+     "confidence": 0.69,
+     "probabilities": {
+      "billing": 0.01,
+      "shipping": 0.0,
+      "technical": 0.75,
+      "account": 0.24,
+      "other": 0.0
+     }
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 621.5881999814883,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 398,
+    "output_tokens": 52,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:47"
+ },
+ "llm": {
+  "raw": {
+   "team": "technical",
+   "confidence": "high"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1373.9292999962345,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 88,
+    "output_tokens": 12,
+    "thinking_tokens": null,
+    "waited_ms": 4594.000000040978,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:47"
+ }
+}

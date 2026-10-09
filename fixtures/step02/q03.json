@@ -1,0 +1,59 @@
+{
+ "step": 2,
+ "query": "q03",
+ "text": "The app crashes every time I open my cart. I'm on Android 15.",
+ "jev": {
+  "raw": {
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "technical",
+     "confidence": 1.0,
+     "probabilities": {
+      "technical": 1.0,
+      "billing": 0.0,
+      "shipping": 0.0,
+      "account": 0.0,
+      "other": 0.0
+     }
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 844.4856000132859,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 399,
+    "output_tokens": 52,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:05"
+ },
+ "llm": {
+  "raw": {
+   "team": "technical",
+   "confidence": "high"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1539.8975999560207,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 90,
+    "output_tokens": 12,
+    "thinking_tokens": null,
+    "waited_ms": 4219.000000040978,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:05"
+ }
+}

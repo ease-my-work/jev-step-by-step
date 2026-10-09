@@ -1,0 +1,59 @@
+{
+ "step": 2,
+ "query": "q10",
+ "text": "The thing I ordered isn't what I expected.",
+ "jev": {
+  "raw": {
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "other",
+     "confidence": 0.52,
+     "probabilities": {
+      "account": 0.0,
+      "shipping": 0.22,
+      "other": 0.62,
+      "technical": 0.0,
+      "billing": 0.16
+     }
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 841.2333999294788,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 391,
+    "output_tokens": 52,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:41"
+ },
+ "llm": {
+  "raw": {
+   "team": "billing",
+   "confidence": "high"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1393.7920000171289,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 82,
+    "output_tokens": 12,
+    "thinking_tokens": null,
+    "waited_ms": 4515.999999945052,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:41"
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "step": 3,
+ "query": "q02",
+ "text": "My order debited amount 2 time. I want immediate help.",
+ "jev": {
+  "raw": {
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 1.0,
+     "confidence": 0.98,
+     "legend": {
+      "0": "calm: no sign of annoyance",
+      "1": "annoyed: unhappy or impatient, but polite",
+      "2": "angry: shouting, insults, threats, or says they've written many times"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.99,
+      "2": 0.01
+     }
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 559.3903999542817,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 340,
+    "output_tokens": 19,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:57"
+ },
+ "llm": {
+  "raw": {
+   "frustration": 1,
+   "confidence": "high"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1533.9779999339953,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 70,
+    "output_tokens": 13,
+    "thinking_tokens": null,
+    "waited_ms": 3890.999999945052,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:57"
+ }
+}

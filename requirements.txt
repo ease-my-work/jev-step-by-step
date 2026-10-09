@@ -1,0 +1,14 @@
+# JEV (TypeSafe) SDK and the Gemini SDK for the LLM side.
+typesafe-sdk>=0.7.2,<0.8
+google-genai>=2.29,<3
+python-dotenv>=1.0
+
+# The terminal UI: live flow chart, tables, arrow-key picker.
+rich>=13
+questionary>=2.0
+
+# Step 11 only: the full Desk Buddy as Google ADK agents.
+google-adk>=2.11,<3
+
+# The course plumbing in kit/ (installed in editable mode so `import kit` works from any step).
+-e .

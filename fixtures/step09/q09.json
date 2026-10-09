@@ -1,0 +1,50 @@
+{
+ "step": 9,
+ "query": "q09",
+ "text": "I want my money back or a new one, whatever is quicker.",
+ "llm": {
+  "raw": {
+   "answers_question": true,
+   "on_policy": true,
+   "decision": "send"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1314.3138999585062,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1348,
+    "output_tokens": 13,
+    "thinking_tokens": null,
+    "waited_ms": 4515.00000001397,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:15:43"
+ },
+ "jev": {
+  "raw": {
+   "answers_question": 0.92,
+   "on_policy": 0.52,
+   "decision": "send"
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 815.4428999405354,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1578,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:15:43"
+ },
+ "draft": "Sorry your kettle stopped working, Ritu! It's within the 30-day return window, so you can choose: a replacement (if it's in stock), or a refund of ₹1,299 to your UPI account within 5–7 working days after pickup. Which would you prefer?"
+}

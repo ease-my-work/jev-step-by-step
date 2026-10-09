@@ -1,0 +1,50 @@
+{
+ "step": 9,
+ "query": "q07",
+ "text": "Does the Pebble X2 blender work on 110V? I'm taking it to the US.",
+ "llm": {
+  "raw": {
+   "answers_question": true,
+   "on_policy": false,
+   "decision": "escalate"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1480.7005999609828,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1004,
+    "output_tokens": 13,
+    "thinking_tokens": null,
+    "waited_ms": 4608.999999938533,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:15:37"
+ },
+ "jev": {
+  "raw": {
+   "answers_question": 0.61,
+   "on_policy": 0.02,
+   "decision": "escalate"
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 814.0925000188872,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1259,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:15:37"
+ },
+ "draft": "Good news — the Pebble X2 works on 110V, so it'll be fine in the US. Enjoy your trip!"
+}

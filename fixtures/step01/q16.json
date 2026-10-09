@@ -1,0 +1,46 @@
+{
+ "step": 1,
+ "query": "q16",
+ "text": "THIRD time I'm writing. Laptop arrived with a cracked screen. Fix this NOW or I'm going to the bank for a chargeback.",
+ "jev": {
+  "raw": {
+   "urgent": 0.84
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 846.5839999262244,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 354,
+    "output_tokens": 20,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T22:48:56"
+ },
+ "llm": {
+  "raw": {
+   "urgent": true,
+   "confidence": "high"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1564.3176001030952,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 86,
+    "output_tokens": 9,
+    "thinking_tokens": null,
+    "waited_ms": 4578.000000095926,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T22:48:56"
+ }
+}

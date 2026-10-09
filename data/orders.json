@@ -1,0 +1,267 @@
+{
+  "store": "Pebble Store (fictional)",
+  "currency": "INR",
+  "as_of": "2026-10-08",
+  "customers": [
+    {"id": "C-1042", "name": "Asha Rao", "email": "asha.rao@example.com", "city": "Bengaluru", "contacts_last_30_days": 1},
+    {"id": "C-1043", "name": "Rahul Mehta", "email": "rahul.mehta@example.com", "city": "Pune", "contacts_last_30_days": 1},
+    {"id": "C-1045", "name": "Imran Shaikh", "email": "imran.shaikh@example.com", "city": "Mumbai", "contacts_last_30_days": 1},
+    {"id": "C-1046", "name": "Sneha Joshi", "email": "sneha.joshi@example.com", "city": "Nagpur", "contacts_last_30_days": 2},
+    {"id": "C-1047", "name": "Anjali Gupta", "email": "anjali.gupta@example.com", "city": "Delhi", "contacts_last_30_days": 1},
+    {"id": "C-1048", "name": "Dev Malhotra", "email": "dev.malhotra@example.com", "city": "Chandigarh", "contacts_last_30_days": 1},
+    {"id": "C-1050", "name": "Priya Nair", "email": "priya.nair@example.com", "city": "Kochi", "contacts_last_30_days": 1},
+    {"id": "C-1051", "name": "Daniel Brooks", "email": "daniel.brooks@example.com", "city": "Goa", "contacts_last_30_days": 1},
+    {"id": "C-1052", "name": "Lena Fischer", "email": "lena.fischer@example.com", "city": "Bengaluru", "contacts_last_30_days": 1},
+    {"id": "C-1053", "name": "Arjun Pillai", "email": "arjun.pillai@example.com", "city": "Chennai", "contacts_last_30_days": 1},
+    {"id": "C-1054", "name": "Grace Okafor", "email": "grace.okafor@example.com", "city": "Hyderabad", "contacts_last_30_days": 2},
+    {"id": "C-1055", "name": "Tom Becker", "email": "tom.becker@example.com", "city": "Mumbai", "contacts_last_30_days": 1},
+    {"id": "C-1056", "name": "Rohan Verma", "email": "rohan.verma@example.com", "city": "Jaipur", "contacts_last_30_days": 1},
+    {"id": "C-1060", "name": "Meera Iyer", "email": "meera.iyer@example.com", "city": "Chennai", "contacts_last_30_days": 1},
+    {"id": "C-1062", "name": "Farah Khan", "email": "farah.khan@example.com", "city": "Lucknow", "contacts_last_30_days": 1},
+    {"id": "C-1070", "name": "Karan Singh", "email": "karan.singh@example.com", "city": "Gurugram", "contacts_last_30_days": 1},
+    {"id": "C-1080", "name": "Vikram Das", "email": "vikram.das@example.com", "city": "Kolkata", "contacts_last_30_days": 3},
+    {"id": "C-1090", "name": "Ritu Sharma", "email": "ritu.sharma@example.com", "city": "Indore", "contacts_last_30_days": 1},
+    {"id": "C-1091", "name": "Nikhil Bose", "email": "nikhil.bose@example.com", "city": "Kolkata", "contacts_last_30_days": 1},
+    {"id": "C-1092", "name": "Kavya Menon", "email": "kavya.menon@example.com", "city": "Thiruvananthapuram", "contacts_last_30_days": 1},
+    {"id": "C-1093", "name": "Manish Kapoor", "email": "manish.kapoor@example.com", "city": "Delhi", "contacts_last_30_days": 4},
+    {"id": "C-2001", "name": "Neha Kulkarni", "email": "neha.kulkarni@example.com", "city": "Pune", "contacts_last_30_days": 1}
+  ],
+  "products": [
+    {"sku": "PB-X2", "name": "Pebble X2 blender", "price": 3999, "voltage": "220-240V, 50Hz (India only)", "warranty_months": 12},
+    {"sku": "EB-100", "name": "Wireless earbuds", "price": 1499, "voltage": "USB-C 5V charging", "warranty_months": 6},
+    {"sku": "DL-20", "name": "LED desk lamp", "price": 1899, "voltage": "220-240V", "warranty_months": 12}
+  ],
+  "orders": [
+    {
+      "id": "ORD-7731", "customer_id": "C-1042", "status": "shipped",
+      "placed_on": "2026-10-06", "promised_by": "2026-10-10", "delivered_on": null,
+      "items": [{"sku": "EB-100", "name": "Wireless earbuds", "qty": 1, "price": 1499}],
+      "total": 1499,
+      "carrier": "BlueDart", "tracking": {"number": "BD551203", "last_update": "2026-10-07", "last_location": "Bengaluru hub"},
+      "charges": [
+        {"id": "CH-90311", "amount": 1499, "at": "2026-10-06T10:42:05", "method": "UPI", "status": "captured"},
+        {"id": "CH-90312", "amount": 1499, "at": "2026-10-06T10:43:51", "method": "UPI", "status": "captured"}
+      ],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7802", "customer_id": "C-1043", "status": "shipped",
+      "placed_on": "2026-10-02", "promised_by": "2026-10-04", "delivered_on": null,
+      "items": [{"sku": "RS-41", "name": "Running shoes (size 9)", "qty": 1, "price": 3299}],
+      "total": 3299,
+      "carrier": "Delhivery", "tracking": {"number": "DL880145", "last_update": "2026-10-05", "last_location": "Pune hub"},
+      "charges": [{"id": "CH-90120", "amount": 3299, "at": "2026-10-02T19:10:00", "method": "card ending 4242", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7740", "customer_id": "C-1045", "status": "processing",
+      "placed_on": "2026-10-07", "promised_by": "2026-10-11", "delivered_on": null,
+      "items": [{"sku": "PC-07", "name": "Phone case", "qty": 1, "price": 499}],
+      "total": 499,
+      "carrier": null, "tracking": null,
+      "charges": [
+        {"id": "CH-90401", "amount": 499, "at": "2026-10-07T21:15:12", "method": "card ending 1881", "status": "captured"},
+        {"id": "CH-90402", "amount": 499, "at": "2026-10-07T21:15:40", "method": "card ending 1881", "status": "captured"}
+      ],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7700", "customer_id": "C-1046", "status": "cancelled",
+      "placed_on": "2026-09-27", "promised_by": "2026-10-01", "delivered_on": null, "cancelled_on": "2026-09-28",
+      "cancel_reason": "item out of stock at seller",
+      "items": [{"sku": "AF-12", "name": "Air fryer", "qty": 1, "price": 5499}],
+      "total": 5499,
+      "carrier": null, "tracking": null,
+      "charges": [{"id": "CH-89870", "amount": 5499, "at": "2026-09-27T12:01:33", "method": "netbanking", "status": "captured"}],
+      "refunds": [{"id": "RF-3301", "amount": 5499, "initiated_on": "2026-09-28", "status": "pending"}]
+    },
+    {
+      "id": "ORD-7880", "customer_id": "C-1047", "status": "shipped",
+      "placed_on": "2026-10-02", "promised_by": "2026-10-09", "delivered_on": null,
+      "items": [{"sku": "SW-03", "name": "Smartwatch (gift wrapped)", "qty": 1, "price": 7499}],
+      "total": 7499,
+      "carrier": "Ecom Express", "tracking": {"number": "EE330912", "last_update": "2026-10-05", "last_location": "Delhi sorting centre"},
+      "charges": [{"id": "CH-90133", "amount": 7499, "at": "2026-10-02T08:45:00", "method": "UPI", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7650", "customer_id": "C-1050", "status": "delivered",
+      "placed_on": "2026-09-02", "promised_by": "2026-09-05", "delivered_on": "2026-09-04",
+      "items": [{"sku": "MG-75", "name": "Mixer grinder 750W", "qty": 1, "price": 4499}],
+      "total": 4499,
+      "carrier": "BlueDart", "tracking": {"number": "BD540077", "last_update": "2026-09-04", "last_location": "Delivered, Kochi"},
+      "charges": [{"id": "CH-88710", "amount": 4499, "at": "2026-09-02T16:20:00", "method": "UPI", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7905", "customer_id": "C-1051", "status": "delivered",
+      "placed_on": "2026-09-20", "promised_by": "2026-09-23", "delivered_on": "2026-09-22",
+      "items": [{"sku": "DL-20", "name": "LED desk lamp", "qty": 1, "price": 1899}],
+      "total": 1899,
+      "carrier": "Delhivery", "tracking": {"number": "DL871190", "last_update": "2026-09-22", "last_location": "Delivered, Goa"},
+      "charges": [{"id": "CH-89502", "amount": 1899, "at": "2026-09-20T11:05:00", "method": "card ending 0005", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7860", "customer_id": "C-1054", "status": "delivered",
+      "placed_on": "2026-10-03", "promised_by": "2026-10-08", "delivered_on": "2026-10-08",
+      "items": [{"sku": "HP-30", "name": "Hair dryer (replacement)", "qty": 1, "price": 0}],
+      "total": 0,
+      "notes": "Free replacement for faulty ORD-7611.",
+      "carrier": "BlueDart", "tracking": {"number": "BD552010", "last_update": "2026-10-08", "last_location": "Delivered, Hyderabad"},
+      "charges": [],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7710", "customer_id": "C-1060", "status": "shipped",
+      "placed_on": "2026-10-05", "promised_by": "2026-10-09", "delivered_on": null,
+      "items": [{"sku": "HD-55", "name": "Over-ear headphones", "qty": 1, "price": 2799}],
+      "total": 2799,
+      "carrier": "Delhivery", "tracking": {"number": "DL884002", "last_update": "2026-10-07", "last_location": "Chennai hub"},
+      "charges": [
+        {"id": "CH-90210", "amount": 2799, "at": "2026-10-05T09:30:02", "method": "card ending 7310", "status": "reversed", "note": "payment attempt failed at bank OTP step; authorization released"},
+        {"id": "CH-90211", "amount": 2799, "at": "2026-10-05T09:32:47", "method": "card ending 7310", "status": "captured"}
+      ],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7815", "customer_id": "C-1062", "status": "delivered",
+      "placed_on": "2026-09-29", "promised_by": "2026-10-03", "delivered_on": "2026-10-07",
+      "items": [{"sku": "BP-22", "name": "Laptop backpack", "qty": 1, "price": 1999}],
+      "total": 1999,
+      "carrier": "Ecom Express", "tracking": {"number": "EE328455", "last_update": "2026-10-07", "last_location": "Delivered, Lucknow"},
+      "charges": [{"id": "CH-89990", "amount": 1999, "at": "2026-09-29T14:12:00", "method": "UPI", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7950", "customer_id": "C-1070", "status": "processing",
+      "placed_on": "2026-10-07", "promised_by": "2026-10-12", "delivered_on": null,
+      "items": [{"sku": "BS-05", "name": "5-shelf bookcase", "qty": 1, "price": 5999}],
+      "total": 5999,
+      "carrier": null, "tracking": null,
+      "shipping_address": "Flat 12B, Palm Residency, Sector 45, Gurugram",
+      "charges": [{"id": "CH-90388", "amount": 5999, "at": "2026-10-07T18:00:00", "method": "UPI", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7601", "customer_id": "C-1080", "status": "delivered",
+      "placed_on": "2026-09-29", "promised_by": "2026-10-03", "delivered_on": "2026-10-03",
+      "items": [{"sku": "LT-14", "name": "14-inch laptop", "qty": 1, "price": 62990}],
+      "total": 62990,
+      "notes": "Customer reported cracked screen on 2026-10-03, 2026-10-05 and 2026-10-07. No resolution yet.",
+      "carrier": "BlueDart", "tracking": {"number": "BD549900", "last_update": "2026-10-03", "last_location": "Delivered, Kolkata"},
+      "charges": [{"id": "CH-89955", "amount": 62990, "at": "2026-09-29T10:00:00", "method": "card ending 4410", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7820", "customer_id": "C-1090", "status": "delivered",
+      "placed_on": "2026-09-28", "promised_by": "2026-10-02", "delivered_on": "2026-10-01",
+      "items": [{"sku": "EK-15", "name": "Electric kettle 1.5L", "qty": 1, "price": 1299}],
+      "total": 1299,
+      "carrier": "Delhivery", "tracking": {"number": "DL869120", "last_update": "2026-10-01", "last_location": "Delivered, Indore"},
+      "charges": [{"id": "CH-89930", "amount": 1299, "at": "2026-09-28T20:40:00", "method": "UPI", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7835", "customer_id": "C-1091", "status": "delivered",
+      "placed_on": "2026-10-01", "promised_by": "2026-10-05", "delivered_on": "2026-10-05",
+      "items": [{"sku": "BD-02", "name": "Cotton bedsheet set (double)", "qty": 1, "price": 899}],
+      "total": 899,
+      "carrier": "Ecom Express", "tracking": {"number": "EE329001", "last_update": "2026-10-05", "last_location": "Delivered, Kolkata"},
+      "charges": [{"id": "CH-90011", "amount": 899, "at": "2026-10-01T13:13:00", "method": "UPI", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7845", "customer_id": "C-1092", "status": "shipped",
+      "placed_on": "2026-10-04", "promised_by": "2026-10-09", "delivered_on": null,
+      "items": [{"sku": "SN-08", "name": "Sneakers (size 6)", "qty": 1, "price": 2199}],
+      "total": 2199,
+      "carrier": "BlueDart", "tracking": {"number": "BD550871", "last_update": "2026-10-07", "last_location": "Kochi hub"},
+      "charges": [{"id": "CH-90160", "amount": 2199, "at": "2026-10-04T17:30:00", "method": "UPI", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7850", "customer_id": "C-1093", "status": "delivered",
+      "placed_on": "2026-09-30", "promised_by": "2026-10-04", "delivered_on": "2026-10-04",
+      "items": [{"sku": "TB-10", "name": "10-inch tablet", "qty": 1, "price": 14999}],
+      "total": 14999,
+      "carrier": "Delhivery", "tracking": {"number": "DL877700", "last_update": "2026-10-04", "last_location": "Delivered, Delhi"},
+      "charges": [{"id": "CH-90050", "amount": 14999, "at": "2026-09-30T09:00:00", "method": "card ending 6612", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7120", "customer_id": "C-2001", "status": "delivered",
+      "placed_on": "2026-03-14", "promised_by": "2026-03-18", "delivered_on": "2026-03-17",
+      "items": [{"sku": "YM-01", "name": "Yoga mat", "qty": 1, "price": 799}],
+      "total": 799,
+      "carrier": "Delhivery", "tracking": {"number": "DL700101", "last_update": "2026-03-17", "last_location": "Delivered, Pune"},
+      "charges": [{"id": "CH-80001", "amount": 799, "at": "2026-03-14T10:00:00", "method": "UPI", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7244", "customer_id": "C-2001", "status": "delivered",
+      "placed_on": "2026-04-22", "promised_by": "2026-04-26", "delivered_on": "2026-04-25",
+      "items": [{"sku": "WB-10", "name": "Steel water bottle", "qty": 2, "price": 449}],
+      "total": 898,
+      "carrier": "BlueDart", "tracking": {"number": "BD420022", "last_update": "2026-04-25", "last_location": "Delivered, Pune"},
+      "charges": [{"id": "CH-81240", "amount": 898, "at": "2026-04-22T08:15:00", "method": "UPI", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7311", "customer_id": "C-2001", "status": "delivered",
+      "placed_on": "2026-05-09", "promised_by": "2026-05-13", "delivered_on": "2026-05-12",
+      "items": [{"sku": "NB-05", "name": "Notebook pack (5)", "qty": 1, "price": 349}, {"sku": "PN-12", "name": "Gel pens (12)", "qty": 1, "price": 199}],
+      "total": 548,
+      "carrier": "Ecom Express", "tracking": {"number": "EE200311", "last_update": "2026-05-12", "last_location": "Delivered, Pune"},
+      "charges": [{"id": "CH-82011", "amount": 548, "at": "2026-05-09T19:45:00", "method": "UPI", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7398", "customer_id": "C-2001", "status": "delivered",
+      "placed_on": "2026-06-02", "promised_by": "2026-06-06", "delivered_on": "2026-06-05",
+      "items": [{"sku": "TS-03", "name": "Cotton T-shirt (M)", "qty": 3, "price": 499}],
+      "total": 1497,
+      "carrier": "Delhivery", "tracking": {"number": "DL740398", "last_update": "2026-06-05", "last_location": "Delivered, Pune"},
+      "charges": [{"id": "CH-83398", "amount": 1497, "at": "2026-06-02T12:30:00", "method": "card ending 9001", "status": "captured"}],
+      "refunds": [{"id": "RF-2101", "amount": 499, "initiated_on": "2026-06-10", "status": "completed"}],
+      "notes": "One T-shirt returned (wrong size)."
+    },
+    {
+      "id": "ORD-7466", "customer_id": "C-2001", "status": "cancelled",
+      "placed_on": "2026-07-11", "promised_by": "2026-07-15", "delivered_on": null, "cancelled_on": "2026-07-11",
+      "cancel_reason": "customer changed mind",
+      "items": [{"sku": "CM-01", "name": "Coffee maker", "qty": 1, "price": 2999}],
+      "total": 2999,
+      "carrier": null, "tracking": null,
+      "charges": [{"id": "CH-84466", "amount": 2999, "at": "2026-07-11T09:00:00", "method": "UPI", "status": "captured"}],
+      "refunds": [{"id": "RF-2290", "amount": 2999, "initiated_on": "2026-07-11", "status": "completed"}]
+    },
+    {
+      "id": "ORD-7553", "customer_id": "C-2001", "status": "delivered",
+      "placed_on": "2026-08-03", "promised_by": "2026-08-07", "delivered_on": "2026-08-06",
+      "items": [{"sku": "PL-02", "name": "Indoor plant pot set", "qty": 1, "price": 1199}],
+      "total": 1199,
+      "carrier": "BlueDart", "tracking": {"number": "BD455530", "last_update": "2026-08-06", "last_location": "Delivered, Pune"},
+      "charges": [{"id": "CH-85553", "amount": 1199, "at": "2026-08-03T16:00:00", "method": "UPI", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7689", "customer_id": "C-2001", "status": "delivered",
+      "placed_on": "2026-09-12", "promised_by": "2026-09-16", "delivered_on": "2026-09-15",
+      "items": [{"sku": "LB-04", "name": "LED bulbs (4-pack)", "qty": 1, "price": 599}],
+      "total": 599,
+      "carrier": "Delhivery", "tracking": {"number": "DL768900", "last_update": "2026-09-15", "last_location": "Delivered, Pune"},
+      "charges": [{"id": "CH-87689", "amount": 599, "at": "2026-09-12T11:11:00", "method": "UPI", "status": "captured"}],
+      "refunds": []
+    },
+    {
+      "id": "ORD-7990", "customer_id": "C-2001", "status": "shipped",
+      "placed_on": "2026-10-03", "promised_by": "2026-10-06", "delivered_on": null,
+      "items": [{"sku": "BL-07", "name": "Bedside lamp", "qty": 1, "price": 1299}],
+      "total": 1299,
+      "carrier": "Ecom Express", "tracking": {"number": "EE331990", "last_update": "2026-10-04", "last_location": "Mumbai sorting centre"},
+      "charges": [{"id": "CH-90299", "amount": 1299, "at": "2026-10-03T21:00:00", "method": "UPI", "status": "captured"}],
+      "refunds": []
+    }
+  ]
+}

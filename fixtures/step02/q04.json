@@ -1,0 +1,59 @@
+{
+ "step": 2,
+ "query": "q04",
+ "text": "Can I change my delivery address? I'm moving to a new flat this weekend.",
+ "jev": {
+  "raw": {
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "shipping",
+     "confidence": 1.0,
+     "probabilities": {
+      "billing": 0.0,
+      "shipping": 1.0,
+      "technical": 0.0,
+      "account": 0.0,
+      "other": 0.0
+     }
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 524.0634999936447,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 398,
+    "output_tokens": 52,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:11"
+ },
+ "llm": {
+  "raw": {
+   "team": "shipping",
+   "confidence": "high"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1377.798300003633,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 89,
+    "output_tokens": 9,
+    "thinking_tokens": null,
+    "waited_ms": 4469.000000040978,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:11"
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "step": 2,
+ "query": "q08",
+ "text": "Thanks, the replacement arrived today and works perfectly!",
+ "jev": {
+  "raw": {
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "other",
+     "confidence": 0.97,
+     "probabilities": {
+      "shipping": 0.02,
+      "account": 0.0,
+      "technical": 0.0,
+      "billing": 0.0,
+      "other": 0.98
+     }
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 600.6401999620721,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 391,
+    "output_tokens": 52,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:35"
+ },
+ "llm": {
+  "raw": {
+   "team": "other",
+   "confidence": "high"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1490.1629999512807,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 81,
+    "output_tokens": 12,
+    "thinking_tokens": null,
+    "waited_ms": 4344.000000040978,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:35"
+ }
+}

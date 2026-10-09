@@ -1,0 +1,59 @@
+{
+ "step": 2,
+ "query": "q05",
+ "text": "Hi, I bought a desk lamp on 20 Sep and it flickers. Can I return it for a refund?",
+ "jev": {
+  "raw": {
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "billing",
+     "confidence": 0.99,
+     "probabilities": {
+      "technical": 0.0,
+      "shipping": 0.0,
+      "account": 0.0,
+      "other": 0.01,
+      "billing": 0.99
+     }
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 2149.3919000495225,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 407,
+    "output_tokens": 52,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:17"
+ },
+ "llm": {
+  "raw": {
+   "team": "billing",
+   "confidence": "high"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1611.744900001213,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 96,
+    "output_tokens": 12,
+    "thinking_tokens": null,
+    "waited_ms": 4609.99999998603,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:17"
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "step": 8,
+ "query": "q02",
+ "text": "My order debited amount 2 time. I want immediate help.",
+ "jev": {
+  "raw": {
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "duplicate_charge",
+     "confidence": 0.98,
+     "probabilities": {
+      "order_status": 0.0,
+      "duplicate_charge": 0.98,
+      "refund_request": 0.02,
+      "change_address": 0.0,
+      "product_question": 0.0,
+      "complaint": 0.0,
+      "account_access": 0.0,
+      "tech_issue": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "needs_human": 0.21,
+   "handled_by": "Gemini",
+   "reply": "Hello Asha, I am so sorry to hear that you were charged twice for your order. Since our records confirm that the duplicate charge of ₹1499 was captured, this extra amount will be refunded automatically to your original payment method within 3–5 working days. I will process this confirmation right away, and you can expect the funds to reflect in your account within that timeframe."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 484.46800000965595,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 952,
+    "output_tokens": 108,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1541.147300042212,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1155,
+    "output_tokens": 78,
+    "thinking_tokens": null,
+    "waited_ms": 9780.999999959022,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:12:10"
+ },
+ "llm": {
+  "raw": {
+   "intent": "duplicate_charge",
+   "needs_human": false,
+   "reply": "I am so sorry about the double charge for your order. We have confirmed that your payment was captured twice, and we will refund the extra ₹1499 back to your original payment method within 3–5 working days. You will receive an email confirmation once the refund is processed.",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1603.0269999755546,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1265,
+    "output_tokens": 87,
+    "thinking_tokens": null,
+    "waited_ms": 4250.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:12:10"
+ }
+}

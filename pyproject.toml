@@ -1,0 +1,35 @@
+[project]
+name = "jev-step-by-step"
+version = "0.1.0"
+description = "Learn JEV (TypeSafe AI) step by step by building a customer-support assistant, compared with an LLM-only version."
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+    "typesafe-sdk>=0.7.2,<0.8",
+    "google-genai>=2.29,<3",
+    "python-dotenv>=1.0",
+    "rich>=13",
+    "questionary>=2.0",
+    "google-adk>=2.11,<3",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+# Only the plumbing package is installed; lessons in steps/ are plain scripts.
+[tool.setuptools]
+packages = ["kit"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.format]
+exclude = ["*.md"]  # README snippets are written for reading, not formatted as full files
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

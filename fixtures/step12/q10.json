@@ -1,0 +1,138 @@
+{
+ "step": 12,
+ "query": "q10",
+ "text": "The thing I ordered isn't what I expected.",
+ "jev": {
+  "raw": {
+   "unsafe": 0.03,
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "other",
+     "confidence": 0.82,
+     "probabilities": {
+      "shipping": 0.03,
+      "account": 0.0,
+      "other": 0.86,
+      "billing": 0.11,
+      "technical": 0.0
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "complaint",
+     "confidence": 0.98,
+     "probabilities": {
+      "order_status": 0.0,
+      "other": 0.0,
+      "tech_issue": 0.0,
+      "account_access": 0.0,
+      "product_question": 0.0,
+      "complaint": 0.98,
+      "change_address": 0.0,
+      "refund_request": 0.02,
+      "duplicate_charge": 0.0
+     }
+    }
+   },
+   "urgent": 0.3,
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 0.69,
+     "confidence": 0.53,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 0.31,
+      "1": 0.69,
+      "2": 0.0
+     }
+    }
+   },
+   "needs_human": 0.12,
+   "handled_by": "Gemini, checked by JEV",
+   "reply": "Hello Nikhil, I'm sorry to hear that your cotton bedsheet set isn't what you expected. Since your order was delivered today, you can return this unused item within 30 days of delivery for a full refund back to your original payment method. I can arrange a return pickup for you; please let me know if you would like to proceed with this next step."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 483.19609998725355,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1210,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Rules (code)",
+    "ms": 0.01580000389367342,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1562.0540999807417,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1106,
+    "output_tokens": 77,
+    "thinking_tokens": null,
+    "waited_ms": 9500.0,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 781.7647999618202,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1665,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:49:08"
+ },
+ "llm": {
+  "raw": {
+   "unsafe": false,
+   "team": "billing",
+   "urgent": false,
+   "frustration": 0,
+   "intent": "refund_request",
+   "needs_human": false,
+   "reply": "I am sorry to hear that the item did not meet your expectations. You can return it within 30 days of delivery as long as it is unused. Once we pick it up, your refund will be processed back to your original payment method within 5–7 working days.",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1619.4454999640584,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1383,
+    "output_tokens": 95,
+    "thinking_tokens": null,
+    "waited_ms": 3984.000000054948,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:49:08"
+ }
+}

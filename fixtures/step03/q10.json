@@ -1,0 +1,62 @@
+{
+ "step": 3,
+ "query": "q10",
+ "text": "The thing I ordered isn't what I expected.",
+ "jev": {
+  "raw": {
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 0.95,
+     "confidence": 0.93,
+     "legend": {
+      "0": "calm: no sign of annoyance",
+      "1": "annoyed: unhappy or impatient, but polite",
+      "2": "angry: shouting, insults, threats, or says they've written many times"
+     },
+     "probabilities": {
+      "0": 0.05,
+      "1": 0.95,
+      "2": 0.0
+     }
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 798.4681000234559,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 336,
+    "output_tokens": 19,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:02:09"
+ },
+ "llm": {
+  "raw": {
+   "frustration": 1,
+   "confidence": "medium"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1270.2090999810025,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 67,
+    "output_tokens": 10,
+    "thinking_tokens": null,
+    "waited_ms": 4421.999999904074,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:02:09"
+ }
+}

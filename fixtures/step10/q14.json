@@ -1,0 +1,127 @@
+{
+ "step": 10,
+ "query": "q14",
+ "text": "Mera order abhi tak nahi aaya, 5 din ho gaye. Kab aayega?",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "shipping",
+     "confidence": 1.0,
+     "probabilities": {
+      "billing": 0.0,
+      "shipping": 1.0,
+      "technical": 0.0,
+      "account": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "order_status",
+     "confidence": 1.0,
+     "probabilities": {
+      "order_status": 1.0,
+      "duplicate_charge": 0.0,
+      "refund_request": 0.0,
+      "change_address": 0.0,
+      "product_question": 0.0,
+      "complaint": 0.0,
+      "account_access": 0.0,
+      "tech_issue": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "urgent": 0.36,
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 0.96,
+     "confidence": 0.94,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 0.04,
+      "1": 0.96,
+      "2": 0.0
+     }
+    }
+   },
+   "needs_human": 0.11,
+   "handled_by": "code",
+   "reply": "Your Bedside lamp (order ORD-7990) is with Ecom Express. Latest update, 2026-10-04: Mumbai sorting centre. It was due by 06 Oct. Sorry, it's running late. I've asked the carrier for an update; you'll hear from us within 24 hours."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 532.1641999762505,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1212,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Rules (code)",
+    "ms": 0.02789997961372137,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Order lookup (code)",
+    "ms": 0.062499893829226494,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:26:38"
+ },
+ "llm": {
+  "raw": {
+   "unsafe": false,
+   "team": "shipping",
+   "urgent": false,
+   "frustration": 1,
+   "intent": "order_status",
+   "needs_human": false,
+   "reply": "I am sorry for the delay in delivering your bedside lamp. Since your tracking hasn't updated since October 4th, I am opening an enquiry with Ecom Express right away. I will get back to you with an update on your delivery within 24 hours.",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1863.9198000309989,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1381,
+    "output_tokens": 114,
+    "thinking_tokens": null,
+    "waited_ms": 3625.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:26:38"
+ }
+}

@@ -1,0 +1,122 @@
+{
+ "step": 11,
+ "query": "q02",
+ "text": "My order debited amount 2 time. I want immediate help.",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": "billing",
+   "intent": "duplicate_charge",
+   "urgent": 0.84,
+   "frustration": 1,
+   "needs_human": 0.21,
+   "handled_by": "billing_agent, checked by JEV",
+   "reply": "I am so sorry for the double charge of ₹1,499 on your order ORD-7731. Since our records confirm this duplicate payment was captured, we have initiated an automatic refund of the extra charge. This amount will be credited back to your original payment method within 3 to 5 working days."
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.09660003706812859,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 840.0766999693587,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1272,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Card number check (code)",
+    "ms": 0.12390001211315393,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · billing_agent",
+    "ms": 2705.475499969907,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1259,
+    "output_tokens": 66,
+    "thinking_tokens": null,
+    "waited_ms": 8407.00000000652,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 826.2180000310764,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1775,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:36:35"
+ },
+ "llm": {
+  "raw": {
+   "handled_by": "billing_agent",
+   "reply": "I am so sorry to hear that you were charged twice for your order. Since our records confirm this duplicate capture, we will automatically refund the extra ₹1499 charge to your original UPI payment method. You can expect this refund to be processed and appear in your account within 3 to 5 working days.",
+   "unsafe": false,
+   "needs_human": false,
+   "team": "billing"
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.10050006676465273,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · coordinator",
+    "ms": 2289.1969999764115,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1302,
+    "output_tokens": 22,
+    "thinking_tokens": null,
+    "waited_ms": 3077.999999979511,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · billing_agent",
+    "ms": 2707.4671000009403,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1533,
+    "output_tokens": 64,
+    "thinking_tokens": null,
+    "waited_ms": 3702.999999979511,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:42:55"
+ }
+}

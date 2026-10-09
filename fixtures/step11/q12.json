@@ -1,0 +1,88 @@
+{
+ "step": 11,
+ "query": "q12",
+ "text": "I need to talk to someone about my order.",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": "shipping",
+   "intent": "order_status",
+   "urgent": 0.32,
+   "frustration": 0,
+   "needs_human": 1.0,
+   "handled_by": "human_handoff",
+   "reply": "Thanks for your patience. I'm passing this to a member of our team now; they'll reply within 4 hours."
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.1490999711677432,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 660.4965999722481,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1208,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Card number check (code)",
+    "ms": 0.014999997802078724,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:39:17"
+ },
+ "llm": {
+  "raw": {
+   "handled_by": "human_handoff",
+   "reply": "Thanks for your patience. I'm passing this to a member of our team now; they'll reply within 4 hours.",
+   "unsafe": false,
+   "needs_human": true
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.1425000373274088,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · coordinator",
+    "ms": 2199.3345000082627,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1251,
+    "output_tokens": 23,
+    "thinking_tokens": null,
+    "waited_ms": 3266.0000000614673,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:44:48"
+ }
+}

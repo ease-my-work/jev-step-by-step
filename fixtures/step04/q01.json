@@ -1,0 +1,109 @@
+{
+ "step": 4,
+ "query": "q01",
+ "text": "Where is my parcel? It said 2 days, it's been 6.",
+ "jev": {
+  "raw": {
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "shipping",
+     "confidence": 1.0,
+     "probabilities": {
+      "account": 0.0,
+      "other": 0.0,
+      "billing": 0.0,
+      "technical": 0.0,
+      "shipping": 1.0
+     }
+    }
+   },
+   "urgent": {
+    "__jev_answer__": {
+     "type": "noul",
+     "noul": 0.43
+    }
+   },
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 1.0,
+     "confidence": 1.0,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 1.0,
+      "2": 0.0
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "order_status",
+     "confidence": 1.0,
+     "probabilities": {
+      "change_address": 0.0,
+      "tech_issue": 0.0,
+      "order_status": 1.0,
+      "account_access": 0.0,
+      "complaint": 0.0,
+      "other": 0.0,
+      "product_question": 0.0,
+      "duplicate_charge": 0.0,
+      "refund_request": 0.0
+     }
+    }
+   },
+   "needs_human": {
+    "__jev_answer__": {
+     "type": "noul",
+     "noul": 0.11
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 5 questions",
+    "ms": 493.3204000117257,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1118,
+    "output_tokens": 188,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:23:37"
+ },
+ "llm": {
+  "raw": {
+   "team": "shipping",
+   "urgent": false,
+   "frustration": 1,
+   "intent": "order_status",
+   "needs_human": false
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1472.295799991116,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 649,
+    "output_tokens": 26,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:23:37"
+ }
+}

@@ -1,0 +1,88 @@
+{
+ "step": 11,
+ "query": "q17",
+ "text": "You people are useless. My order was cancelled for no reason and the money is still not back after 10 days.",
+ "jev": {
+  "raw": {
+   "unsafe": 0.05,
+   "team": "billing",
+   "intent": "refund_request",
+   "urgent": 0.63,
+   "frustration": 2,
+   "needs_human": 1.0,
+   "handled_by": "human_handoff",
+   "reply": "Thanks for your patience. I'm passing this to a member of our team now; they'll reply within 4 hours."
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.09350001346319914,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 556.5977999940515,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1250,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Card number check (code)",
+    "ms": 0.018300022929906845,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:40:17"
+ },
+ "llm": {
+  "raw": {
+   "handled_by": "human_handoff",
+   "reply": "Thanks for your patience. I'm passing this to a member of our team now; they'll reply within 4 hours.",
+   "unsafe": false,
+   "needs_human": true
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.06220000796020031,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · coordinator",
+    "ms": 2715.7997000031173,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1290,
+    "output_tokens": 23,
+    "thinking_tokens": null,
+    "waited_ms": 3452.999999979511,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:45:37"
+ }
+}

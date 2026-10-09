@@ -1,0 +1,62 @@
+{
+ "step": 3,
+ "query": "q01",
+ "text": "Where is my parcel? It said 2 days, it's been 6.",
+ "jev": {
+  "raw": {
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 1.0,
+     "confidence": 1.0,
+     "legend": {
+      "0": "calm: no sign of annoyance",
+      "1": "annoyed: unhappy or impatient, but polite",
+      "2": "angry: shouting, insults, threats, or says they've written many times"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 1.0,
+      "2": 0.0
+     }
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 1637.4721999745816,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 343,
+    "output_tokens": 19,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:52"
+ },
+ "llm": {
+  "raw": {
+   "frustration": 1,
+   "confidence": "high"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 2105.421100044623,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 74,
+    "output_tokens": 13,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:01:52"
+ }
+}

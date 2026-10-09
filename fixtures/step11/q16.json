@@ -1,0 +1,88 @@
+{
+ "step": 11,
+ "query": "q16",
+ "text": "THIRD time I'm writing. Laptop arrived with a cracked screen. Fix this NOW or I'm going to the bank for a chargeback.",
+ "jev": {
+  "raw": {
+   "unsafe": 0.05,
+   "team": "shipping",
+   "intent": "complaint",
+   "urgent": 0.86,
+   "frustration": 2,
+   "needs_human": 0.97,
+   "handled_by": "human_handoff",
+   "reply": "Thanks for your patience. I'm passing this to a member of our team now; they'll reply within 4 hours."
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.0817000400274992,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 529.9139999551699,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1289,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Card number check (code)",
+    "ms": 0.02059992402791977,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:40:11"
+ },
+ "llm": {
+  "raw": {
+   "handled_by": "human_handoff",
+   "reply": "Thanks for your patience. I'm passing this to a member of our team now; they'll reply within 4 hours.",
+   "unsafe": false,
+   "needs_human": true
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.052699935622513294,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · coordinator",
+    "ms": 2529.054000042379,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1334,
+    "output_tokens": 23,
+    "thinking_tokens": null,
+    "waited_ms": 3250.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:45:31"
+ }
+}

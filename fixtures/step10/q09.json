@@ -1,0 +1,138 @@
+{
+ "step": 10,
+ "query": "q09",
+ "text": "I want my money back or a new one, whatever is quicker.",
+ "jev": {
+  "raw": {
+   "unsafe": 0.03,
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "billing",
+     "confidence": 1.0,
+     "probabilities": {
+      "billing": 1.0,
+      "shipping": 0.0,
+      "technical": 0.0,
+      "account": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "refund_request",
+     "confidence": 1.0,
+     "probabilities": {
+      "order_status": 0.0,
+      "duplicate_charge": 0.0,
+      "refund_request": 1.0,
+      "change_address": 0.0,
+      "product_question": 0.0,
+      "complaint": 0.0,
+      "account_access": 0.0,
+      "tech_issue": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "urgent": 0.49,
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 1.01,
+     "confidence": 0.92,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 0.02,
+      "1": 0.95,
+      "2": 0.03
+     }
+    }
+   },
+   "needs_human": 0.13,
+   "handled_by": "human review (draft failed the check)",
+   "reply": "Hello Ritu, I am so sorry to hear that you are having trouble with your electric kettle. Since you ordered it recently, we can arrange a pickup for a replacement or a refund, with the refund taking 5–7 working days after pickup. Please let me know which option you prefer, and I will initiate the pickup process for you right away."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 487.793100066483,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1214,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Rules (code)",
+    "ms": 0.03999995533376932,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1690.2405000291765,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1113,
+    "output_tokens": 72,
+    "thinking_tokens": null,
+    "waited_ms": 9594.000000040978,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 1160.5560999596491,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1668,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:25:57"
+ },
+ "llm": {
+  "raw": {
+   "unsafe": false,
+   "team": "billing",
+   "urgent": false,
+   "frustration": 1,
+   "intent": "refund_request",
+   "needs_human": false,
+   "reply": "I am sorry to hear that you are having an issue with your electric kettle. Since your order was delivered on October 1st, we can gladly assist you with a return or a replacement. Once we arrange a pickup and receive the item, your refund will be processed back to your original payment method within 5 to 7 working days.",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1915.6346000963822,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1387,
+    "output_tokens": 128,
+    "thinking_tokens": null,
+    "waited_ms": 4077.999999979511,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:25:57"
+ }
+}

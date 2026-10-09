@@ -1,0 +1,71 @@
+{
+ "step": 6,
+ "query": "q24",
+ "text": "My order was promised for 3 Oct and only came yesterday. Do I get the late-delivery credit?",
+ "jev": {
+  "raw": {
+   "claim": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "late_delivery_credit",
+     "confidence": 1.0,
+     "probabilities": {
+      "charged_twice": 0.0,
+      "late_delivery_credit": 1.0,
+      "refund_not_received": 0.0,
+      "return_item": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "late_credit_eligible": true
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 912.0965000474826,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 420,
+    "output_tokens": 61,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Check delivery date",
+    "ms": 0.0078000593930482864,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:08:24"
+ },
+ "llm": {
+  "raw": {
+   "claim": "late_delivery_credit",
+   "late_credit_eligible": true
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 2171.635100035928,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 493,
+    "output_tokens": 14,
+    "thinking_tokens": null,
+    "waited_ms": 4750.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:08:24"
+ }
+}

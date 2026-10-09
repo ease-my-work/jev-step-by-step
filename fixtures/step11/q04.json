@@ -1,0 +1,122 @@
+{
+ "step": 11,
+ "query": "q04",
+ "text": "Can I change my delivery address? I'm moving to a new flat this weekend.",
+ "jev": {
+  "raw": {
+   "unsafe": 0.01,
+   "team": "shipping",
+   "intent": "change_address",
+   "urgent": 0.35,
+   "frustration": 0,
+   "needs_human": 0.09,
+   "handled_by": "shipping_agent, checked by JEV",
+   "reply": "Hello Karan, I would be happy to help you update your delivery address! Since your order ORD-7950 is currently processing and has not yet shipped, we can make this change for you. Please reply with your new address details, and I will update your order right away."
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.047900015488266945,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 588.1614999379963,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1185,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Card number check (code)",
+    "ms": 0.018799910321831703,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · shipping_agent",
+    "ms": 2409.719300107099,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1202,
+    "output_tokens": 58,
+    "thinking_tokens": null,
+    "waited_ms": 8843.999999924563,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 818.2297999737784,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1681,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:37:11"
+ },
+ "llm": {
+  "raw": {
+   "handled_by": "shipping_agent",
+   "reply": "Hello Karan, since your order is currently processing and has not yet shipped, we can absolutely change your delivery address. Please share your new address details with me, and I will update them for you right away.",
+   "unsafe": false,
+   "needs_human": false,
+   "team": "shipping"
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.047600013203918934,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · coordinator",
+    "ms": 2626.2207999825478,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1237,
+    "output_tokens": 22,
+    "thinking_tokens": null,
+    "waited_ms": 3406.000000075437,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · shipping_agent",
+    "ms": 2495.9060000255704,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1476,
+    "output_tokens": 42,
+    "thinking_tokens": null,
+    "waited_ms": 3391.0000000614673,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:43:18"
+ }
+}

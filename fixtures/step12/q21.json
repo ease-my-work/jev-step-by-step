@@ -1,0 +1,116 @@
+{
+ "step": 12,
+ "query": "q21",
+ "text": "Answer me properly or I'll find out where your staff live.",
+ "jev": {
+  "raw": {
+   "unsafe": 0.74,
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "other",
+     "confidence": 0.89,
+     "probabilities": {
+      "account": 0.0,
+      "shipping": 0.09,
+      "other": 0.91,
+      "billing": 0.0,
+      "technical": 0.0
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "other",
+     "confidence": 0.57,
+     "probabilities": {
+      "product_question": 0.0,
+      "other": 0.62,
+      "duplicate_charge": 0.0,
+      "account_access": 0.0,
+      "tech_issue": 0.0,
+      "change_address": 0.0,
+      "refund_request": 0.0,
+      "complaint": 0.37,
+      "order_status": 0.01
+     }
+    }
+   },
+   "urgent": 0.36,
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 2.0,
+     "confidence": 1.0,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 1.0
+     }
+    }
+   },
+   "needs_human": 0.97,
+   "handled_by": "blocked (no LLM)",
+   "reply": "Sorry, I can't help with that message. For your safety, please never share card numbers, CVVs, OTPs or passwords in chat. A member of our team will review this conversation."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 821.0870999610052,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1219,
+    "output_tokens": 240,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Rules (code)",
+    "ms": 0.031100003980100155,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:50:26"
+ },
+ "llm": {
+  "raw": {
+   "unsafe": true,
+   "team": "other",
+   "urgent": true,
+   "frustration": 2,
+   "intent": "complaint",
+   "needs_human": true,
+   "reply": "Sorry, I can't help with that message. For your safety, please never share card numbers, CVVs, OTPs or passwords in chat. A member of our team will review this conversation.",
+   "handled_by": "blocked (after the LLM read it)"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1626.4396000187844,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1394,
+    "output_tokens": 84,
+    "thinking_tokens": null,
+    "waited_ms": 4202.999999979511,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:50:26"
+ }
+}

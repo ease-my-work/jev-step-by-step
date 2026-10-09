@@ -1,0 +1,138 @@
+{
+ "step": 12,
+ "query": "q07",
+ "text": "Does the Pebble X2 blender work on 110V? I'm taking it to the US.",
+ "jev": {
+  "raw": {
+   "unsafe": 0.01,
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "other",
+     "confidence": 0.97,
+     "probabilities": {
+      "billing": 0.0,
+      "account": 0.0,
+      "shipping": 0.0,
+      "other": 0.98,
+      "technical": 0.02
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "product_question",
+     "confidence": 1.0,
+     "probabilities": {
+      "complaint": 0.0,
+      "refund_request": 0.0,
+      "other": 0.0,
+      "tech_issue": 0.0,
+      "change_address": 0.0,
+      "account_access": 0.0,
+      "order_status": 0.0,
+      "duplicate_charge": 0.0,
+      "product_question": 1.0
+     }
+    }
+   },
+   "urgent": 0.17,
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 0.0,
+     "confidence": 1.0,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 1.0,
+      "1": 0.0,
+      "2": 0.0
+     }
+    }
+   },
+   "needs_human": 0.07,
+   "handled_by": "Gemini, checked by JEV",
+   "reply": "Hello Arjun! The Pebble X2 blender operates on 220-240V (India only), so it will not work on 110V in the US. Please let me know if you would like any assistance with other products before your travels!"
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 580.0536000169814,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 934,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Rules (code)",
+    "ms": 0.010999967344105244,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1377.9715999262407,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 888,
+    "output_tokens": 55,
+    "thinking_tokens": null,
+    "waited_ms": 9405.999999959022,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 573.3673999784514,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1382,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:48:32"
+ },
+ "llm": {
+  "raw": {
+   "unsafe": false,
+   "team": "other",
+   "urgent": false,
+   "frustration": 0,
+   "intent": "product_question",
+   "needs_human": false,
+   "reply": "Hi Arjun, the Pebble X2 blender is designed to operate on 220-240V (50Hz) for use in India, so it will not work on standard 110V power in the US. You would need a voltage converter to use it there. Let me know if you have any other questions!",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1718.7133999541402,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1153,
+    "output_tokens": 113,
+    "thinking_tokens": null,
+    "waited_ms": 3984.000000054948,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:48:32"
+ }
+}

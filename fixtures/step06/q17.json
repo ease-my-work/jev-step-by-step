@@ -1,0 +1,71 @@
+{
+ "step": 6,
+ "query": "q17",
+ "text": "You people are useless. My order was cancelled for no reason and the money is still not back after 10 days.",
+ "jev": {
+  "raw": {
+   "claim": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "refund_not_received",
+     "confidence": 1.0,
+     "probabilities": {
+      "charged_twice": 0.0,
+      "return_item": 0.0,
+      "late_delivery_credit": 0.0,
+      "refund_not_received": 1.0,
+      "other": 0.0
+     }
+    }
+   },
+   "refund_overdue": true
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 603.5919999703765,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 423,
+    "output_tokens": 61,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Check refund date",
+    "ms": 0.0323000131174922,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:08:06"
+ },
+ "llm": {
+  "raw": {
+   "claim": "refund_not_received",
+   "refund_overdue": true
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1423.2280999422073,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 528,
+    "output_tokens": 16,
+    "thinking_tokens": null,
+    "waited_ms": 4500.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:08:06"
+ }
+}

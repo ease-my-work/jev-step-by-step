@@ -1,0 +1,122 @@
+{
+ "step": 11,
+ "query": "q23",
+ "text": "I see two amounts for one order in my bank app. Did you charge me twice?",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": "billing",
+   "intent": "duplicate_charge",
+   "urgent": 0.31,
+   "frustration": 0,
+   "needs_human": 0.1,
+   "handled_by": "billing_agent, checked by JEV",
+   "reply": "Hello Meera, I am so sorry for any confusion with your billing. I can confirm you were only charged once (₹2799) for your headphones; the first transaction of ₹2799 failed at the OTP step and was reversed, meaning it is not a charge and your bank will release this held amount within 7 days. Your order is on its way and scheduled to arrive by tomorrow, October 9th."
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.0602001091465354,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 870.3456999501213,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1304,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Card number check (code)",
+    "ms": 0.016200006939470768,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · billing_agent",
+    "ms": 2556.616200017743,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1291,
+    "output_tokens": 89,
+    "thinking_tokens": null,
+    "waited_ms": 8577.99999997951,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 925.4801000934094,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1830,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:41:24"
+ },
+ "llm": {
+  "raw": {
+   "handled_by": "billing_agent",
+   "reply": "Hello Meera, I am sorry for any confusion with your billing. You were not charged twice; the first attempt of ₹2,799 was reversed because it failed at the bank OTP step, while only the second attempt was successfully captured. Your bank will release this held, reversed amount back to your account within 7 days.",
+   "unsafe": false,
+   "needs_human": false,
+   "team": "billing"
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.08130003698170185,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · coordinator",
+    "ms": 2908.5698999697343,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1334,
+    "output_tokens": 22,
+    "thinking_tokens": null,
+    "waited_ms": 3234.000000054948,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · billing_agent",
+    "ms": 2568.2718000607565,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1565,
+    "output_tokens": 68,
+    "thinking_tokens": null,
+    "waited_ms": 3094.000000040978,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:46:31"
+ }
+}

@@ -1,0 +1,109 @@
+{
+ "step": 4,
+ "query": "q18",
+ "text": "Urgent!! Ordered a birthday gift for tomorrow and tracking hasn't moved in 3 days.",
+ "jev": {
+  "raw": {
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "shipping",
+     "confidence": 1.0,
+     "probabilities": {
+      "account": 0.0,
+      "shipping": 1.0,
+      "technical": 0.0,
+      "billing": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "urgent": {
+    "__jev_answer__": {
+     "type": "noul",
+     "noul": 0.89
+    }
+   },
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 1.15,
+     "confidence": 0.78,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.85,
+      "2": 0.15
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "order_status",
+     "confidence": 0.99,
+     "probabilities": {
+      "tech_issue": 0.0,
+      "account_access": 0.0,
+      "refund_request": 0.0,
+      "change_address": 0.0,
+      "complaint": 0.01,
+      "order_status": 0.99,
+      "duplicate_charge": 0.0,
+      "product_question": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "needs_human": {
+    "__jev_answer__": {
+     "type": "noul",
+     "noul": 0.15
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 5 questions",
+    "ms": 759.7122999140993,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1117,
+    "output_tokens": 188,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:24:13"
+ },
+ "llm": {
+  "raw": {
+   "team": "shipping",
+   "urgent": true,
+   "frustration": 1,
+   "intent": "order_status",
+   "needs_human": false
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1481.5354000311345,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 647,
+    "output_tokens": 45,
+    "thinking_tokens": null,
+    "waited_ms": 4187.999999965541,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:24:13"
+ }
+}

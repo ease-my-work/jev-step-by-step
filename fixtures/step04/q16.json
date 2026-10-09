@@ -1,0 +1,109 @@
+{
+ "step": 4,
+ "query": "q16",
+ "text": "THIRD time I'm writing. Laptop arrived with a cracked screen. Fix this NOW or I'm going to the bank for a chargeback.",
+ "jev": {
+  "raw": {
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "shipping",
+     "confidence": 0.82,
+     "probabilities": {
+      "billing": 0.14,
+      "shipping": 0.86,
+      "technical": 0.0,
+      "account": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "urgent": {
+    "__jev_answer__": {
+     "type": "noul",
+     "noul": 0.87
+    }
+   },
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 2.0,
+     "confidence": 1.0,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 1.0
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "complaint",
+     "confidence": 0.78,
+     "probabilities": {
+      "order_status": 0.0,
+      "duplicate_charge": 0.0,
+      "refund_request": 0.19,
+      "change_address": 0.0,
+      "product_question": 0.0,
+      "complaint": 0.81,
+      "account_access": 0.0,
+      "tech_issue": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "needs_human": {
+    "__jev_answer__": {
+     "type": "noul",
+     "noul": 0.96
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 5 questions",
+    "ms": 1011.2604999449104,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1196,
+    "output_tokens": 188,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:24:07"
+ },
+ "llm": {
+  "raw": {
+   "team": "shipping",
+   "urgent": true,
+   "frustration": 2,
+   "intent": "complaint",
+   "needs_human": true
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1539.8304000264034,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 727,
+    "output_tokens": 25,
+    "thinking_tokens": null,
+    "waited_ms": 4609.99999998603,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:24:07"
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "step": 3,
+ "query": "q21",
+ "text": "Answer me properly or I'll find out where your staff live.",
+ "jev": {
+  "raw": {
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 2.0,
+     "confidence": 1.0,
+     "legend": {
+      "0": "calm: no sign of annoyance",
+      "1": "annoyed: unhappy or impatient, but polite",
+      "2": "angry: shouting, insults, threats, or says they've written many times"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 1.0
+     }
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 822.4000000627711,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 339,
+    "output_tokens": 19,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:02:39"
+ },
+ "llm": {
+  "raw": {
+   "frustration": 2,
+   "confidence": "high"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1305.9212999651209,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 70,
+    "output_tokens": 13,
+    "thinking_tokens": null,
+    "waited_ms": 4702.999999979511,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:02:39"
+ }
+}

@@ -1,0 +1,138 @@
+{
+ "step": 10,
+ "query": "q03",
+ "text": "The app crashes every time I open my cart. I'm on Android 15.",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "technical",
+     "confidence": 1.0,
+     "probabilities": {
+      "billing": 0.0,
+      "shipping": 0.0,
+      "technical": 1.0,
+      "account": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "tech_issue",
+     "confidence": 1.0,
+     "probabilities": {
+      "order_status": 0.0,
+      "duplicate_charge": 0.0,
+      "refund_request": 0.0,
+      "change_address": 0.0,
+      "product_question": 0.0,
+      "complaint": 0.0,
+      "account_access": 0.0,
+      "tech_issue": 1.0,
+      "other": 0.0
+     }
+    }
+   },
+   "urgent": 0.49,
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 0.91,
+     "confidence": 0.86,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 0.09,
+      "1": 0.91,
+      "2": 0.0
+     }
+    }
+   },
+   "needs_human": 0.13,
+   "handled_by": "Gemini, checked by JEV",
+   "reply": "Hi Tom, I am so sorry to hear that our app is crashing when you try to open your cart on Android 15. Since this is a technical issue that I cannot resolve, I am handing your case over to our support team right now. A team member will email you at tom.becker@example.com within 24 hours to help get this fixed for you."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 1027.407699963078,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 925,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Rules (code)",
+    "ms": 0.02510007470846176,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1466.6666000848636,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 877,
+    "output_tokens": 79,
+    "thinking_tokens": null,
+    "waited_ms": 8890.00000001397,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 570.1911998912692,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1387,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:24:44"
+ },
+ "llm": {
+  "raw": {
+   "unsafe": false,
+   "team": "technical",
+   "urgent": false,
+   "frustration": 1,
+   "intent": "tech_issue",
+   "needs_human": false,
+   "reply": "I am so sorry to hear that the app is crashing when you try to open your cart. I will share these details with our technical team right away so they can look into this Android 15 issue. In the meantime, you can try completing your purchase on our website using your mobile or desktop browser.",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1748.6638000700623,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1146,
+    "output_tokens": 121,
+    "thinking_tokens": null,
+    "waited_ms": 3905.999999959022,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:24:44"
+ }
+}

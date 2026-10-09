@@ -1,0 +1,68 @@
+{
+ "step": 8,
+ "query": "q16",
+ "text": "THIRD time I'm writing. Laptop arrived with a cracked screen. Fix this NOW or I'm going to the bank for a chargeback.",
+ "jev": {
+  "raw": {
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "complaint",
+     "confidence": 0.82,
+     "probabilities": {
+      "other": 0.0,
+      "complaint": 0.84,
+      "order_status": 0.0,
+      "tech_issue": 0.0,
+      "account_access": 0.0,
+      "product_question": 0.0,
+      "change_address": 0.0,
+      "duplicate_charge": 0.0,
+      "refund_request": 0.16
+     }
+    }
+   },
+   "needs_human": 0.97,
+   "handled_by": "human",
+   "reply": "Thanks for your patience. I'm passing this to a member of our team now; they'll reply within 4 hours."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 537.1758999535814,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 969,
+    "output_tokens": 108,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:13:16"
+ },
+ "llm": {
+  "raw": {
+   "intent": "complaint",
+   "needs_human": true,
+   "reply": "I am so sorry for the frustration and the cracked screen on your new laptop. Because of the chargeback request and previous contacts, a team member will review your case and reply within 4 hours. We will make sure this is resolved for you as quickly as possible.",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1688.5680999839678,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1296,
+    "output_tokens": 81,
+    "thinking_tokens": null,
+    "waited_ms": 4297.000000020489,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:13:16"
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "step": 1,
+ "query": "q06",
+ "text": "I forgot my password and the reset email never arrives.",
+ "jev": {
+  "raw": {
+   "urgent": 0.53
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 642.8769999183714,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 335,
+    "output_tokens": 20,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T22:48:27"
+ },
+ "llm": {
+  "raw": {
+   "urgent": false,
+   "confidence": "high"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 2551.233800011687,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 67,
+    "output_tokens": 9,
+    "thinking_tokens": null,
+    "waited_ms": 4703.000000095926,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T22:48:27"
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "step": 3,
+ "query": "q08",
+ "text": "Thanks, the replacement arrived today and works perfectly!",
+ "jev": {
+  "raw": {
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 0.0,
+     "confidence": 1.0,
+     "legend": {
+      "0": "calm: no sign of annoyance",
+      "1": "annoyed: unhappy or impatient, but polite",
+      "2": "angry: shouting, insults, threats, or says they've written many times"
+     },
+     "probabilities": {
+      "0": 1.0,
+      "1": 0.0,
+      "2": 0.0
+     }
+    }
+   }
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 514.8480000207201,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 336,
+    "output_tokens": 19,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:02:03"
+ },
+ "llm": {
+  "raw": {
+   "frustration": 0,
+   "confidence": "high"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1567.263500066474,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 66,
+    "output_tokens": 10,
+    "thinking_tokens": null,
+    "waited_ms": 4468.999999924563,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:02:03"
+ }
+}

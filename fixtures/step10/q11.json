@@ -1,0 +1,127 @@
+{
+ "step": 10,
+ "query": "q11",
+ "text": "Can you check what's going on with my account and my last order?",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "account",
+     "confidence": 0.64,
+     "probabilities": {
+      "shipping": 0.11,
+      "other": 0.18000000000000002,
+      "billing": 0.0,
+      "technical": 0.0,
+      "account": 0.71
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "order_status",
+     "confidence": 0.7,
+     "probabilities": {
+      "refund_request": 0.0,
+      "order_status": 0.73,
+      "product_question": 0.0,
+      "tech_issue": 0.0,
+      "account_access": 0.02,
+      "complaint": 0.0,
+      "other": 0.25,
+      "change_address": 0.0,
+      "duplicate_charge": 0.0
+     }
+    }
+   },
+   "urgent": 0.31,
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 0.02,
+     "confidence": 0.97,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 0.98,
+      "1": 0.02,
+      "2": 0.0
+     }
+    }
+   },
+   "needs_human": 0.14,
+   "handled_by": "code",
+   "reply": "I couldn't find an order on your account. Could you share the order number (it starts with ORD-)?"
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 581.612900015898,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 927,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Rules (code)",
+    "ms": 0.009900075383484364,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Order lookup (code)",
+    "ms": 0.00200001522898674,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:26:14"
+ },
+ "llm": {
+  "raw": {
+   "unsafe": false,
+   "team": "account",
+   "urgent": false,
+   "frustration": 0,
+   "intent": "order_status",
+   "needs_human": false,
+   "reply": "I'd be happy to help you check your account and order status. To get started, could you please provide your order number or the email address associated with your account? Once I have that, I can look up the details for you right away.",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1818.2579000713304,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1147,
+    "output_tokens": 94,
+    "thinking_tokens": null,
+    "waited_ms": 3875.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:26:14"
+ }
+}

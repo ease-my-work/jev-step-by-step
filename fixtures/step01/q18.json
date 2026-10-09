@@ -1,0 +1,46 @@
+{
+ "step": 1,
+ "query": "q18",
+ "text": "Urgent!! Ordered a birthday gift for tomorrow and tracking hasn't moved in 3 days.",
+ "jev": {
+  "raw": {
+   "urgent": 0.92
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 1 question",
+    "ms": 821.688299998641,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 343,
+    "output_tokens": 20,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T22:49:02"
+ },
+ "llm": {
+  "raw": {
+   "urgent": true,
+   "confidence": "high"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1299.2761000059545,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 76,
+    "output_tokens": 9,
+    "thinking_tokens": null,
+    "waited_ms": 4422.000000020489,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T22:49:02"
+ }
+}

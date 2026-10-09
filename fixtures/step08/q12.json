@@ -1,0 +1,79 @@
+{
+ "step": 8,
+ "query": "q12",
+ "text": "I need to talk to someone about my order.",
+ "jev": {
+  "raw": {
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "order_status",
+     "confidence": 0.49,
+     "probabilities": {
+      "complaint": 0.0,
+      "refund_request": 0.0,
+      "other": 0.45,
+      "tech_issue": 0.0,
+      "change_address": 0.0,
+      "account_access": 0.0,
+      "order_status": 0.55,
+      "product_question": 0.0,
+      "duplicate_charge": 0.0
+     }
+    }
+   },
+   "needs_human": 0.41,
+   "handled_by": "code",
+   "reply": "Your Sneakers (size 6) (order ORD-7845) is with BlueDart. Latest update, 2026-10-07: Kochi hub. It was due by 09 Oct."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 878.6282999208197,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 888,
+    "output_tokens": 108,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Order lookup (code)",
+    "ms": 0.09520002640783787,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:13:04"
+ },
+ "llm": {
+  "raw": {
+   "intent": "other",
+   "needs_human": true,
+   "reply": "I understand you would like to speak with someone regarding your order. A member of our team will get back to you within 4 hours to assist you directly.",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1596.9557000789791,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1214,
+    "output_tokens": 58,
+    "thinking_tokens": null,
+    "waited_ms": 4577.999999979511,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:13:04"
+ }
+}

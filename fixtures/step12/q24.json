@@ -1,0 +1,138 @@
+{
+ "step": 12,
+ "query": "q24",
+ "text": "My order was promised for 3 Oct and only came yesterday. Do I get the late-delivery credit?",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "billing",
+     "confidence": 0.45,
+     "probabilities": {
+      "billing": 0.56,
+      "other": 0.0,
+      "technical": 0.0,
+      "account": 0.0,
+      "shipping": 0.44
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "refund_request",
+     "confidence": 1.0,
+     "probabilities": {
+      "complaint": 0.0,
+      "product_question": 0.0,
+      "change_address": 0.0,
+      "tech_issue": 0.0,
+      "other": 0.0,
+      "duplicate_charge": 0.0,
+      "account_access": 0.0,
+      "order_status": 0.0,
+      "refund_request": 1.0
+     }
+    }
+   },
+   "urgent": 0.22,
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 0.91,
+     "confidence": 0.86,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 0.09,
+      "1": 0.91,
+      "2": 0.0
+     }
+    }
+   },
+   "needs_human": 0.08,
+   "handled_by": "Gemini, checked by JEV",
+   "reply": "Hello Farah! I am so sorry your order was delivered late on 7 October. Since it arrived more than 3 days after the promised date of 3 October, you are indeed eligible for a ₹99 store credit. I will apply this credit to your account right away, and you will receive a confirmation email within the next few minutes."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 524.083000025712,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1220,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Rules (code)",
+    "ms": 0.04700000863522291,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1527.7127999579534,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1125,
+    "output_tokens": 70,
+    "thinking_tokens": null,
+    "waited_ms": 9219.000000040978,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 644.150499952957,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1681,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:51:02"
+ },
+ "llm": {
+  "raw": {
+   "unsafe": false,
+   "team": "shipping",
+   "urgent": false,
+   "frustration": 0,
+   "intent": "complaint",
+   "needs_human": false,
+   "reply": "I am very sorry your order was delivered late. Since it arrived on 7 October, which is more than 3 days after the promised date of 3 October, you are eligible for a ₹99 store credit. I have credited this amount to your account, and you can use it on your next purchase.",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1891.5842999704182,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1391,
+    "output_tokens": 122,
+    "thinking_tokens": null,
+    "waited_ms": 3750.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:51:02"
+ }
+}

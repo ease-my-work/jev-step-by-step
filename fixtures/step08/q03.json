@@ -1,0 +1,79 @@
+{
+ "step": 8,
+ "query": "q03",
+ "text": "The app crashes every time I open my cart. I'm on Android 15.",
+ "jev": {
+  "raw": {
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "tech_issue",
+     "confidence": 1.0,
+     "probabilities": {
+      "order_status": 0.0,
+      "duplicate_charge": 0.0,
+      "refund_request": 0.0,
+      "change_address": 0.0,
+      "product_question": 0.0,
+      "complaint": 0.0,
+      "account_access": 0.0,
+      "tech_issue": 1.0,
+      "other": 0.0
+     }
+    }
+   },
+   "needs_human": 0.13,
+   "handled_by": "Gemini",
+   "reply": "Hello Tom, I am so sorry to hear that our app is crashing when you try to view your cart on Android 15. Since this is a technical issue and I do not have a standard fix in my records, I am handing your case over to a human support specialist right now. A member of our team will reach out to you via your email, tom.becker@example.com, within the next 24 hours to help resolve this."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 769.6471998933703,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 605,
+    "output_tokens": 108,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1703.2639000099152,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 877,
+    "output_tokens": 94,
+    "thinking_tokens": null,
+    "waited_ms": 9672.00000002049,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:12:23"
+ },
+ "llm": {
+  "raw": {
+   "intent": "tech_issue",
+   "needs_human": false,
+   "reply": "I'm so sorry you're experiencing crashes with the app on Android 15. I am sharing this bug report with our technical team immediately so they can investigate and release a fix. In the meantime, you can try clearing your app cache or using our website to access your cart.",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1574.892200063914,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 982,
+    "output_tokens": 87,
+    "thinking_tokens": null,
+    "waited_ms": 4437.000000034459,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:12:23"
+ }
+}

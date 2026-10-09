@@ -1,0 +1,122 @@
+{
+ "step": 11,
+ "query": "q08",
+ "text": "Thanks, the replacement arrived today and works perfectly!",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": "other",
+   "intent": "other",
+   "urgent": 0.04,
+   "frustration": 0,
+   "needs_human": 0.05,
+   "handled_by": "other_agent, checked by JEV",
+   "reply": "You're so welcome, Grace, and I'm absolutely thrilled to hear that your replacement hair dryer arrived today and is working perfectly! Thank you for letting us know, and please don't hesitate to reach out if you ever need anything else. Have a wonderful day ahead!"
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.560999964363873,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 636.6916999686509,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1155,
+    "output_tokens": 240,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Card number check (code)",
+    "ms": 0.035499921068549156,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · other_agent",
+    "ms": 3200.7366000907496,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1162,
+    "output_tokens": 57,
+    "thinking_tokens": null,
+    "waited_ms": 8609.99999998603,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 747.1300000324845,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1646,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:38:23"
+ },
+ "llm": {
+  "raw": {
+   "handled_by": "other_agent",
+   "reply": "You are so very welcome, Grace! We are absolutely thrilled to hear that your replacement hair dryer arrived safely today and is working perfectly for you. Please don't hesitate to reach out if you ever need anything else, and have a wonderful day ahead!",
+   "unsafe": false,
+   "needs_human": false,
+   "team": "other"
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.04700000863522291,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · coordinator",
+    "ms": 2462.9966999636963,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1205,
+    "output_tokens": 22,
+    "thinking_tokens": null,
+    "waited_ms": 3297.000000020489,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · other_agent",
+    "ms": 3090.186000103131,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1436,
+    "output_tokens": 51,
+    "thinking_tokens": null,
+    "waited_ms": 3531.000000075437,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:44:07"
+ }
+}

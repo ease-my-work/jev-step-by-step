@@ -1,0 +1,50 @@
+{
+ "step": 9,
+ "query": "q05",
+ "text": "Hi, I bought a desk lamp on 20 Sep and it flickers. Can I return it for a refund?",
+ "llm": {
+  "raw": {
+   "answers_question": true,
+   "on_policy": false,
+   "decision": "escalate"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1379.900399944745,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1354,
+    "output_tokens": 13,
+    "thinking_tokens": null,
+    "waited_ms": 4358.999999938533,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:15:31"
+ },
+ "jev": {
+  "raw": {
+   "answers_question": 0.94,
+   "on_policy": 0.8,
+   "decision": "send"
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 485.24880001787096,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1584,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:15:31"
+ },
+ "draft": "Sorry the lamp flickers, Daniel! It was delivered on 22 Sep, so it's still inside our 30-day return window. Once we pick it up, your ₹1,899 refund goes back to your card within 5–7 working days."
+}

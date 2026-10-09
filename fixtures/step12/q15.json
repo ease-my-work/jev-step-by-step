@@ -1,0 +1,138 @@
+{
+ "step": 12,
+ "query": "q15",
+ "text": "cant login app says error 503 since morning, need to pay bill today",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "technical",
+     "confidence": 0.39,
+     "probabilities": {
+      "shipping": 0.0,
+      "technical": 0.51,
+      "other": 0.0,
+      "billing": 0.0,
+      "account": 0.49
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "account_access",
+     "confidence": 0.8,
+     "probabilities": {
+      "order_status": 0.0,
+      "other": 0.0,
+      "tech_issue": 0.18,
+      "duplicate_charge": 0.0,
+      "change_address": 0.0,
+      "account_access": 0.8200000000000001,
+      "refund_request": 0.0,
+      "complaint": 0.0,
+      "product_question": 0.0
+     }
+    }
+   },
+   "urgent": 0.95,
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 0.97,
+     "confidence": 0.95,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 0.03,
+      "1": 0.97,
+      "2": 0.0
+     }
+    }
+   },
+   "needs_human": 0.14,
+   "handled_by": "human review (draft failed the check)",
+   "reply": "Hello Rohan, I am so sorry you are experiencing a 503 error on our app today when trying to pay your bill. Since this technical issue is preventing you from logging in and I want to make sure we get this resolved for you quickly, I am handing your case over to a human support specialist right now. A team member will reach out to you via your email, rohan.verma@example.com, within the next hour to assist you."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 595.7909000571817,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 927,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Rules (code)",
+    "ms": 0.010999967344105244,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1809.5230999169871,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 877,
+    "output_tokens": 95,
+    "thinking_tokens": null,
+    "waited_ms": 9640.00000001397,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 1075.6685000378639,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1406,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:49:51"
+ },
+ "llm": {
+  "raw": {
+   "unsafe": false,
+   "team": "technical",
+   "urgent": true,
+   "frustration": 1,
+   "intent": "tech_issue",
+   "needs_human": false,
+   "reply": "I am so sorry you are experiencing a 503 error on our app today. Our technical team is actively working to resolve this system issue as quickly as possible. Please try logging in again in an hour, or you can access your account through our website to complete your payment.",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1670.5666000489146,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1147,
+    "output_tokens": 116,
+    "thinking_tokens": null,
+    "waited_ms": 4234.000000054948,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:49:51"
+ }
+}

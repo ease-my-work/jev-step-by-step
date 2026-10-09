@@ -1,0 +1,111 @@
+{
+ "step": 11,
+ "query": "q14",
+ "text": "Mera order abhi tak nahi aaya, 5 din ho gaye. Kab aayega?",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": "shipping",
+   "intent": "order_status",
+   "urgent": 0.37,
+   "frustration": 1,
+   "needs_human": 0.11,
+   "handled_by": "code",
+   "reply": "Your Bedside lamp (order ORD-7990) is with Ecom Express. Latest update, 2026-10-04: Mumbai sorting centre. It was due by 06 Oct. Sorry, it's running late. I've asked the carrier for an update; you'll hear from us within 24 hours."
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.19319995772093534,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 529.2487000115216,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1212,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Card number check (code)",
+    "ms": 0.007500057108700275,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Order lookup (code)",
+    "ms": 0.028699985705316067,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:39:47"
+ },
+ "llm": {
+  "raw": {
+   "handled_by": "shipping_agent",
+   "reply": "Hello Neha, I am so sorry for the delay in delivering your bedside lamp, as your tracking has not updated since October 4th. I have just opened an enquiry with Ecom Express to locate your package. I will monitor this closely and reach out to you with an update within the next 24 hours.",
+   "unsafe": false,
+   "needs_human": false,
+   "team": "shipping"
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.06120000034570694,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · coordinator",
+    "ms": 2451.028099982068,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1255,
+    "output_tokens": 22,
+    "thinking_tokens": null,
+    "waited_ms": 3172.000000020489,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · shipping_agent",
+    "ms": 2708.1452999264,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1494,
+    "output_tokens": 65,
+    "thinking_tokens": null,
+    "waited_ms": 3547.000000020489,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:45:13"
+ }
+}

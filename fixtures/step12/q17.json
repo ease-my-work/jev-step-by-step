@@ -1,0 +1,116 @@
+{
+ "step": 12,
+ "query": "q17",
+ "text": "You people are useless. My order was cancelled for no reason and the money is still not back after 10 days.",
+ "jev": {
+  "raw": {
+   "unsafe": 0.05,
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "billing",
+     "confidence": 1.0,
+     "probabilities": {
+      "shipping": 0.0,
+      "account": 0.0,
+      "billing": 1.0,
+      "other": 0.0,
+      "technical": 0.0
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "refund_request",
+     "confidence": 0.99,
+     "probabilities": {
+      "product_question": 0.0,
+      "duplicate_charge": 0.0,
+      "other": 0.0,
+      "order_status": 0.0,
+      "account_access": 0.0,
+      "complaint": 0.01,
+      "tech_issue": 0.0,
+      "refund_request": 0.99,
+      "change_address": 0.0
+     }
+    }
+   },
+   "urgent": 0.64,
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 2.0,
+     "confidence": 1.0,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 1.0
+     }
+    }
+   },
+   "needs_human": 1.0,
+   "handled_by": "human",
+   "reply": "Thanks for your patience. I'm passing this to a member of our team now; they'll reply within 4 hours."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 536.0553000355139,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1250,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Rules (code)",
+    "ms": 0.03620004281401634,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:50:02"
+ },
+ "llm": {
+  "raw": {
+   "unsafe": false,
+   "team": "billing",
+   "urgent": true,
+   "frustration": 2,
+   "intent": "refund_request",
+   "needs_human": true,
+   "reply": "I am very sorry for the frustration and the delay in receiving your refund. Since your refund has not arrived after 7 working days, I am handing your case over to a team member now. A member of our team will review this and get back to you within 4 hours to resolve this.",
+   "handled_by": "human"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1924.1182000841945,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1417,
+    "output_tokens": 119,
+    "thinking_tokens": null,
+    "waited_ms": 4375.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:50:02"
+ }
+}

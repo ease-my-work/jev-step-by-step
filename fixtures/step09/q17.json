@@ -1,0 +1,50 @@
+{
+ "step": 9,
+ "query": "q17",
+ "text": "You people are useless. My order was cancelled for no reason and the money is still not back after 10 days.",
+ "llm": {
+  "raw": {
+   "answers_question": false,
+   "on_policy": false,
+   "decision": "escalate"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1251.6169999726117,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1343,
+    "output_tokens": 14,
+    "thinking_tokens": null,
+    "waited_ms": 4672.000000020489,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:15:49"
+ },
+ "jev": {
+  "raw": {
+   "answers_question": 0.06,
+   "on_policy": 0.22,
+   "decision": "escalate"
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 827.8372000204399,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1566,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:15:49"
+ },
+ "draft": "We're sorry for the inconvenience. Please read the refund policy on our website for more information."
+}

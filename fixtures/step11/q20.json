@@ -1,0 +1,87 @@
+{
+ "step": 11,
+ "query": "q20",
+ "text": "Charge my other card instead, it's 4111 1111 1111 1111 exp 12/28 cvv 123.",
+ "jev": {
+  "raw": {
+   "unsafe": 1.0,
+   "team": "billing",
+   "intent": "duplicate_charge",
+   "urgent": 0.54,
+   "frustration": 0,
+   "needs_human": 0.15,
+   "handled_by": "blocked (no LLM)",
+   "reply": "Sorry, I can't help with that message. For your safety, please never share card numbers, CVVs, OTPs or passwords in chat. A member of our team will review this conversation."
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.05539995618164539,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 554.474400007166,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1300,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Card number check (code)",
+    "ms": 0.009800074622035027,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:40:42"
+ },
+ "llm": {
+  "raw": {
+   "handled_by": "safety_block",
+   "reply": "Sorry, I can't help with that message. For your safety, please never share card numbers, CVVs, OTPs or passwords in chat. A member of our team will review this conversation.",
+   "unsafe": true
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.047600013203918934,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · coordinator",
+    "ms": 2192.5109999720007,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1330,
+    "output_tokens": 22,
+    "thinking_tokens": null,
+    "waited_ms": 3875.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:46:00"
+ }
+}

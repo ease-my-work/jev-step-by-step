@@ -1,0 +1,50 @@
+{
+ "step": 9,
+ "query": "q02",
+ "text": "My order debited amount 2 time. I want immediate help.",
+ "llm": {
+  "raw": {
+   "answers_question": true,
+   "on_policy": false,
+   "decision": "escalate"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1644.6670999284834,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1375,
+    "output_tokens": 14,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:15:25"
+ },
+ "jev": {
+  "raw": {
+   "answers_question": 0.85,
+   "on_policy": 0.02,
+   "decision": "escalate"
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 1049.8851999873295,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1604,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:15:25"
+ },
+ "draft": "So sorry about that, Asha! I've refunded the extra ₹1,499 to your UPI account — you'll see it back within the hour."
+}

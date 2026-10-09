@@ -1,0 +1,138 @@
+{
+ "step": 12,
+ "query": "q04",
+ "text": "Can I change my delivery address? I'm moving to a new flat this weekend.",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "shipping",
+     "confidence": 1.0,
+     "probabilities": {
+      "billing": 0.0,
+      "shipping": 1.0,
+      "technical": 0.0,
+      "account": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "change_address",
+     "confidence": 1.0,
+     "probabilities": {
+      "order_status": 0.0,
+      "duplicate_charge": 0.0,
+      "refund_request": 0.0,
+      "change_address": 1.0,
+      "product_question": 0.0,
+      "complaint": 0.0,
+      "account_access": 0.0,
+      "tech_issue": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "urgent": 0.34,
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 0.0,
+     "confidence": 1.0,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 1.0,
+      "1": 0.0,
+      "2": 0.0
+     }
+    }
+   },
+   "needs_human": 0.08,
+   "handled_by": "Gemini, checked by JEV",
+   "reply": "Hello Karan! Since your order ORD-7950 is currently processing and has not yet shipped, we can definitely change your delivery address. Please share your new address details with me. Once you reply, I will update the shipping address for your order right away."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 552.7464000042528,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1185,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Rules (code)",
+    "ms": 0.02889998722821474,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1528.2324999570847,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1094,
+    "output_tokens": 54,
+    "thinking_tokens": null,
+    "waited_ms": 8327.99999997951,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 2135.3540000272915,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1625,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:47:58"
+ },
+ "llm": {
+  "raw": {
+   "unsafe": false,
+   "team": "shipping",
+   "urgent": false,
+   "frustration": 0,
+   "intent": "change_address",
+   "needs_human": false,
+   "reply": "Yes, I can certainly help you with that! Since your order is currently still processing, we are able to update your shipping address. Please reply with your new address details, and I will update it for you right away.",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1608.694100053981,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1364,
+    "output_tokens": 104,
+    "thinking_tokens": null,
+    "waited_ms": 2875.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:47:58"
+ }
+}

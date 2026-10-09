@@ -1,0 +1,138 @@
+{
+ "step": 12,
+ "query": "q23",
+ "text": "I see two amounts for one order in my bank app. Did you charge me twice?",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "billing",
+     "confidence": 1.0,
+     "probabilities": {
+      "billing": 1.0,
+      "shipping": 0.0,
+      "technical": 0.0,
+      "account": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "duplicate_charge",
+     "confidence": 1.0,
+     "probabilities": {
+      "order_status": 0.0,
+      "duplicate_charge": 1.0,
+      "refund_request": 0.0,
+      "change_address": 0.0,
+      "product_question": 0.0,
+      "complaint": 0.0,
+      "account_access": 0.0,
+      "tech_issue": 0.0,
+      "other": 0.0
+     }
+    }
+   },
+   "urgent": 0.31,
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 0.27,
+     "confidence": 0.59,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 0.73,
+      "1": 0.27,
+      "2": 0.0
+     }
+    }
+   },
+   "needs_human": 0.1,
+   "handled_by": "Gemini, checked by JEV",
+   "reply": "Hello Meera, I am happy to help you with this! We only charged you once; the first attempt of ₹2799 was reversed and is not a charge, so your bank will release this held amount within 7 days. Your second payment attempt was successfully captured to complete the order."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 491.98409996461123,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1304,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Rules (code)",
+    "ms": 0.012999982573091984,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1435.0579000310972,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1191,
+    "output_tokens": 61,
+    "thinking_tokens": null,
+    "waited_ms": 9202.99999997951,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 813.9573000371456,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1751,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:50:50"
+ },
+ "llm": {
+  "raw": {
+   "unsafe": false,
+   "team": "billing",
+   "urgent": true,
+   "frustration": 0,
+   "intent": "duplicate_charge",
+   "needs_human": false,
+   "reply": "I see you have two payment entries for your order. Only one payment of ₹2,799 was actually charged (captured), while the first attempt failed and was reversed. Your bank will release this held amount back to your account within 7 days.",
+   "handled_by": "Gemini"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1641.7183999437839,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1461,
+    "output_tokens": 85,
+    "thinking_tokens": null,
+    "waited_ms": 3702.999999979511,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:50:50"
+ }
+}

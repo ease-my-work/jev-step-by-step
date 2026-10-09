@@ -1,0 +1,122 @@
+{
+ "step": 11,
+ "query": "q24",
+ "text": "My order was promised for 3 Oct and only came yesterday. Do I get the late-delivery credit?",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": "billing",
+   "intent": "refund_request",
+   "urgent": 0.21,
+   "frustration": 1,
+   "needs_human": 0.08,
+   "handled_by": "billing_agent, checked by JEV",
+   "reply": "I am so sorry that your order was delivered late. Since your order arrived four days after the promised date, I have credited ₹99 in store credit to your account. You will see this credit reflected in your account profile immediately and it is ready to use on your next purchase."
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.09920005686581135,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 636.8243999313563,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1220,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Card number check (code)",
+    "ms": 0.012699980288743973,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · billing_agent",
+    "ms": 2437.067099963315,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1222,
+    "output_tokens": 57,
+    "thinking_tokens": null,
+    "waited_ms": 7515.999999945052,
+    "error": null
+   },
+   {
+    "kind": "jev",
+    "label": "JEV · 2 questions",
+    "ms": 553.9576000301167,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1714,
+    "output_tokens": 38,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:41:41"
+ },
+ "llm": {
+  "raw": {
+   "handled_by": "shipping_agent",
+   "reply": "Hello Farah, I am so sorry your order arrived four days later than promised. Because your delivery was delayed by more than 3 days, I have issued a ₹99 store credit to your account. You will receive an email confirmation with your credit details shortly.",
+   "unsafe": false,
+   "needs_human": false,
+   "team": "shipping"
+  },
+  "stages": [
+   {
+    "kind": "code",
+    "label": "Load records (code)",
+    "ms": 0.05319993942975998,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · coordinator",
+    "ms": 2364.1688000643626,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1265,
+    "output_tokens": 22,
+    "thinking_tokens": null,
+    "waited_ms": 3422.000000020489,
+    "error": null
+   },
+   {
+    "kind": "llm",
+    "label": "Gemini · shipping_agent",
+    "ms": 2542.579200002365,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1504,
+    "output_tokens": 53,
+    "thinking_tokens": null,
+    "waited_ms": 3641.0000000614673,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:46:43"
+ }
+}

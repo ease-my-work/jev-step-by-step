@@ -1,0 +1,116 @@
+{
+ "step": 12,
+ "query": "q12",
+ "text": "I need to talk to someone about my order.",
+ "jev": {
+  "raw": {
+   "unsafe": 0.02,
+   "team": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "shipping",
+     "confidence": 0.99,
+     "probabilities": {
+      "other": 0.01,
+      "technical": 0.0,
+      "shipping": 0.99,
+      "account": 0.0,
+      "billing": 0.0
+     }
+    }
+   },
+   "intent": {
+    "__jev_answer__": {
+     "type": "choice",
+     "choice": "order_status",
+     "confidence": 0.52,
+     "probabilities": {
+      "change_address": 0.0,
+      "duplicate_charge": 0.0,
+      "other": 0.43,
+      "refund_request": 0.0,
+      "order_status": 0.57,
+      "product_question": 0.0,
+      "account_access": 0.0,
+      "tech_issue": 0.0,
+      "complaint": 0.0
+     }
+    }
+   },
+   "urgent": 0.32,
+   "frustration": {
+    "__jev_answer__": {
+     "type": "score",
+     "score": 0.0,
+     "confidence": 1.0,
+     "legend": {
+      "0": "calm",
+      "1": "annoyed but polite",
+      "2": "angry: shouting, insults, threats, or many messages"
+     },
+     "probabilities": {
+      "0": 1.0,
+      "1": 0.0,
+      "2": 0.0
+     }
+    }
+   },
+   "needs_human": 1.0,
+   "handled_by": "human",
+   "reply": "Thanks for your patience. I'm passing this to a member of our team now; they'll reply within 4 hours."
+  },
+  "stages": [
+   {
+    "kind": "jev",
+    "label": "JEV · 8 questions",
+    "ms": 481.36540001723915,
+    "model": "typesafe/jev-1.13-20260917",
+    "input_tokens": 1208,
+    "output_tokens": 241,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   },
+   {
+    "kind": "code",
+    "label": "Rules (code)",
+    "ms": 0.02010003663599491,
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "thinking_tokens": null,
+    "waited_ms": 0.0,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:49:19"
+ },
+ "llm": {
+  "raw": {
+   "unsafe": false,
+   "team": "other",
+   "urgent": false,
+   "frustration": 0,
+   "intent": "other",
+   "needs_human": true,
+   "reply": "I understand you'd like to speak with a person. A team member will reply to you within 4 hours to assist you with your order.",
+   "handled_by": "human"
+  },
+  "stages": [
+   {
+    "kind": "llm",
+    "label": "Gemini call",
+    "ms": 1478.7887999555096,
+    "model": "gemini-3.5-flash",
+    "input_tokens": 1378,
+    "output_tokens": 61,
+    "thinking_tokens": null,
+    "waited_ms": 4344.000000040978,
+    "error": null
+   }
+  ],
+  "error": null,
+  "recorded_at": "2026-10-08T23:49:19"
+ }
+}

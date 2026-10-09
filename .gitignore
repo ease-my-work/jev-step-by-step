@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Google ADK dev UI (adk web) local sessions
+.adk/
+
+# Private working plan (never published)
+plan.md
